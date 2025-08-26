@@ -1,0 +1,16 @@
+name: ga_retail_project
+version: 1.0.0
+config-version: 2
+profile: ga_retail_project
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  ga_retail_project:
+    +materialized: view          # default for staging
+    staging:
+      +schema: stg               # optional: keep staging in stg schema
+    mart:
+      +materialized: table       # marts as tables
+      +schema: mart              # ensure marts land in mart dataset
