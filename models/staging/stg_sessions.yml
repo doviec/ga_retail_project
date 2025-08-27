@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_sessions
+    description: "Staging table for GA sessions: typed, trimmed, cost-scoped."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [visitor_id, visit_id]
+    columns:
+      - name: visit_id
+        tests: [not_null]
+      - name: visitor_id
+        tests: [not_null]
+      - name: session_date
+        tests: [not_null]

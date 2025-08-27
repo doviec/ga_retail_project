@@ -1,0 +1,12 @@
+# config.yaml
+project_id: e2e-dbt-project      
+dataset: ext
+table: fx_rates
+
+# external source
+base_url: https://api.exchangerate.host
+currencies: [USD, EUR, GBP, ILS, CAD, AUD]
+
+# ingestion window (defaults if CLI args not given)
+start_date: yesterday              # supports: YYYY-MM-DD, "yesterday"
+end_date: yesterday

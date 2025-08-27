@@ -10,7 +10,6 @@ models:
   ga_retail_project:
     +materialized: view          # default for staging
     staging:
-      +schema: stg               # optional: keep staging in stg schema
     mart:
       +materialized: table       # marts as tables
       +schema: mart              # ensure marts land in mart dataset
