@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: fct_sales_item
+    description: "Fact table containing enriched sales transactions with session and product data."
+    columns:
+      - name: visit_id
+        description: "Unique session ID."
+        tests:
+          - not_null
+      - name: visitor_id
+        description: "Unique visitor ID."
+        tests:
+          - not_null
+      - name: transaction_id
+        description: "Transaction identifier (may be null if no purchase)."
+      - name: product_sku
+        description: "Product identifier (SKU)."
+      - name: product_price_usd
+        description: "Product price in USD."
+        tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "product_price_usd >= 0 OR product_price_usd IS NULL"
+      - name: revenue_usd
+        description: "Session-level revenue in USD."
+        tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "revenue_usd >= 0 OR revenue_usd IS NULL"
+      - name: revenue_local
+        description: "Session-level revenue in local currency."
+        tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "revenue_local >= 0 OR revenue_local IS NULL"

@@ -8,8 +8,12 @@ clean-targets: ["target", "dbt_packages"]
 
 models:
   ga_retail_project:
-    +materialized: view          # default for staging
     staging:
+      +schema: stg # all models in models/staging → BigQuery dataset "stg"
+      +materialized: view
+    intermediate:
+      +schema: int # all models in models/intermediate → dataset "int"
+      +materialized: view
     mart:
-      +materialized: table       # marts as tables
-      +schema: mart              # ensure marts land in mart dataset
+      +schema: mart # all models in models/mart → dataset "mart"
+      +materialized: table

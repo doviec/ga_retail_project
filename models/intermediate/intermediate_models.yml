@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: int_sessions_enriched
+    description: "Intermediate model combining session-level data with product-level hits."
+    columns:
+      - name: visit_id
+        description: "Unique session ID."
+        tests:
+          - not_null
+      - name: visitor_id
+        description: "Unique visitor ID."
+        tests:
+          - not_null
+      - name: session_date
+        description: "Session date."
+        tests:
+          - not_null
+      - name: revenue_usd
+        description: "Revenue in USD (cleaned)."
+        tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "revenue_usd >= 0 or revenue_usd is null"
+      - name: revenue_local
+        description: "Revenue in local currency."
+        tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "revenue_local >= 0 or revenue_local is null"

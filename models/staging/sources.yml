@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: ext
+    description: "External ingested datasets for enrichment (fx rates, country mapping)."
+    database: e2e-dbt-project # <-- your GCP project ID
+    schema: ext
+
+    tables:
+      - name: country_currency
+        description: "Mapping of countries to local currencies."
+        columns:
+          - name: country
+            description: "Country name."
+            tests:
+              - not_null
+          - name: currency
+            description: "ISO currency code (e.g., USD, EUR)."
+            tests:
+              - not_null
+
+      - name: fx_rates
+        description: "Foreign exchange rates to USD, ingested from exchangerate.host."
+        loaded_at_field: rate_date
+        freshness:
+          warn_after: { count: 1, period: day }
+          error_after: { count: 3, period: day }
+        columns:
+          - name: rate_date
+            description: "Date of FX rate."
+            tests:
+              - not_null
+          - name: currency
+            description: "ISO currency code."
+            tests:
+              - not_null
+          - name: rate_to_usd
+            description: "Conversion rate against USD."
+            tests:
+              - not_null

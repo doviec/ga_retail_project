@@ -1,21 +1,21 @@
 
 
-  create or replace view `e2e-dbt-project`.`stg`.`stg_sessions`
+  create or replace view `e2e-dbt-project`.`analytics_stg`.`stg_sessions`
   OPTIONS()
-  as WITH source AS (
-  SELECT
-    PARSE_DATE('%Y%m%d', date)                  AS session_date,
-	geoNetwork.country                         as country,
-    fullVisitorId                               AS visitor_id,
-    visitId                                     AS visit_id,
-    trafficSource.source                        AS traffic_source,
-    trafficSource.medium                        AS traffic_medium,
-    trafficSource.campaign                      AS traffic_campaign,
-    totals.visits                               AS visits,
-    totals.transactions                         AS transactions,
-    SAFE_DIVIDE(totals.transactionRevenue, 1e6) AS revenue_usd
-  FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`
-  WHERE _TABLE_SUFFIX BETWEEN '20170801' AND '20170831'
+  as with source as (
+    select
+        parse_date('%Y%m%d', date)                  as session_date,
+        geoNetwork.country                         as country,
+        fullVisitorId                               as visitor_id,
+        visitId                                     as visit_id,
+        trafficSource.source                        as traffic_source,
+        trafficSource.medium                        as traffic_medium,
+        trafficSource.campaign                      as traffic_campaign,
+        totals.visits                               as visits,
+        totals.transactions                         as transactions,
+        safe_divide(totals.transactionRevenue, 1e6) as revenue_usd
+    from `bigquery-public-data.google_analytics_sample.ga_sessions_*`
+    where _table_suffix between '20170801' and '20170831'
 )
-SELECT * FROM source;
+select * from source;
 
