@@ -1,12 +1,20 @@
-# config.yaml
-project_id: e2e-dbt-project      
+project_id: e2e-dbt-project
 dataset: ext
 table: fx_rates
 
-# external source
+# used by main.py (Cloud Function). local script uses ECB and ignores base_url.
 base_url: https://api.exchangerate.host
-currencies: [USD, EUR, GBP, ILS, CAD, AUD]
 
-# ingestion window (defaults if CLI args not given)
-start_date: yesterday              # supports: YYYY-MM-DD, "yesterday"
-end_date: yesterday
+# currencies to load (add as you wish)
+currencies:
+  - EUR
+  - GBP
+  - ILS
+  - CAD
+  - AUD
+  - JPY
+  - CHF
+
+# default run window if CLI args not given
+start_date: "yesterday"
+end_date: "yesterday"

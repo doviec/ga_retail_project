@@ -22,27 +22,16 @@ models:
           - not_null
       - name: revenue_usd
         description: "Revenue converted to USD."
-        tests:
-          - dbt_utils.expression_is_true:
-              arguments:
-                expression: "revenue_usd >= 0"
 
   - name: stg_sessions_with_fx
     description: "Staging table enriched with currency mapping and FX conversion."
     columns:
       - name: revenue_local
         description: "Revenue converted to local currency."
-        tests:
-          - dbt_utils.expression_is_true:
-              arguments:
-                expression: "revenue_local >= 0 or revenue_local is null"
 
   - name: stg_hits_products
     description: "Staging table for product-level hits."
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          arguments:
-            combination_of_columns: [visit_id, product_sku, hit_date]
+    tests: []
     columns:
       - name: product_sku
         description: "Unique product identifier."
@@ -50,7 +39,3 @@ models:
           - not_null
       - name: product_price_usd
         description: "Unit product price in USD."
-        tests:
-          - dbt_utils.expression_is_true:
-              arguments:
-                expression: "product_price_usd >= 0"

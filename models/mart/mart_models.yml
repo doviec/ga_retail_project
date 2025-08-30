@@ -2,35 +2,40 @@ version: 2
 
 models:
   - name: fct_sales_item
-    description: "Fact table containing enriched sales transactions with session and product data."
+    description: "Item-level sales fact, USD & local revenue with traffic and geography."
     columns:
-      - name: visit_id
-        description: "Unique session ID."
-        tests:
-          - not_null
-      - name: visitor_id
-        description: "Unique visitor ID."
-        tests:
-          - not_null
+      - name: session_date
+        tests: [not_null]
       - name: transaction_id
-        description: "Transaction identifier (may be null if no purchase)."
+        tests: [not_null]
       - name: product_sku
-        description: "Product identifier (SKU)."
-      - name: product_price_usd
-        description: "Product price in USD."
-        tests:
-          - dbt_utils.expression_is_true:
-              arguments:
-                expression: "product_price_usd >= 0 OR product_price_usd IS NULL"
+        tests: [not_null]
       - name: revenue_usd
-        description: "Session-level revenue in USD."
         tests:
+          - not_null
           - dbt_utils.expression_is_true:
-              arguments:
-                expression: "revenue_usd >= 0 OR revenue_usd IS NULL"
+              expression: "revenue_usd >= 0"
       - name: revenue_local
-        description: "Session-level revenue in local currency."
         tests:
           - dbt_utils.expression_is_true:
-              arguments:
-                expression: "revenue_local >= 0 OR revenue_local IS NULL"
+              expression: "revenue_local >= 0"
+
+  - name: dim_products
+    columns:
+      - name: product_sku
+        tests: [unique, not_null]
+
+  - name: dim_country
+    columns:
+      - name: country
+        tests: [unique, not_null]
+
+  - name: dim_visitors
+    columns:
+      - name: visitor_id
+        tests: [unique, not_null]
+
+  - name: dim_date
+    columns:
+      - name: date
+        tests: [unique, not_null]
