@@ -2,18 +2,37 @@ name: ga_retail_project
 version: 1.0.0
 config-version: 2
 profile: ga_retail_project
+
 model-paths: ["models"]
+seed-paths: ["data"] # dbt will load CSVs from /data with `dbt seed`
 target-path: "target"
 clean-targets: ["target", "dbt_packages"]
 
 models:
   ga_retail_project:
     staging:
-      +schema: stg # all models in models/staging → BigQuery dataset "stg"
+      +schema: stg # Bronze
       +materialized: view
     intermediate:
-      +schema: int # all models in models/intermediate → dataset "int"
+      +schema: int # Silver
       +materialized: view
     mart:
-      +schema: mart # all models in models/mart → dataset "mart"
+      +schema: mart # Gold
       +materialized: table
+
+seeds:
+  +schema: stg # put seeds in Bronze (stg)
+  ga_retail_project:
+    +quote_columns: false # BigQuery-friendly; optional
+
+quoting:
+  database: false
+  schema: false
+  identifier: false
+
+# ----------------------------
+# Global variables
+# ----------------------------
+vars:
+  ga_start: "20160101"
+  ga_end: "20170831"

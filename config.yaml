@@ -5,6 +5,9 @@ table: fx_rates
 # used by main.py (Cloud Function). local script uses ECB and ignores base_url.
 base_url: https://api.exchangerate.host
 
+# ECB historical FX rates ZIP file URL
+ecb_zip_url: "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.zip"
+
 # currencies to load (add as you wish)
 currencies:
   - EUR

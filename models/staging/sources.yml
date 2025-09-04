@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: ext
     description: "External ingested datasets for enrichment (fx rates, country mapping)."
-    database: e2e-dbt-project # <-- your GCP project ID
+    database: e2e-dbt-project
     schema: ext
 
     tables:
@@ -20,11 +20,12 @@ sources:
               - not_null
 
       - name: fx_rates
-        description: "Foreign exchange rates to USD, ingested from exchangerate.host."
-        loaded_at_field: rate_date
+        description: "Foreign exchange rates to USD (USD per 1 currency)."
+        # IMPORTANT: cast DATE -> TIMESTAMP for freshness checks
+        loaded_at_field: "TIMESTAMP(rate_date)"
         freshness:
           warn_after: { count: 1, period: day }
-          error_after: { count: 3, period: day }
+          error_after: { count: 2, period: day }
         columns:
           - name: rate_date
             description: "Date of FX rate."
@@ -35,6 +36,6 @@ sources:
             tests:
               - not_null
           - name: rate_to_usd
-            description: "Conversion rate against USD."
+            description: "Conversion rate: USD per 1 unit of currency."
             tests:
               - not_null

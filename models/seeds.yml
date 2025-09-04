@@ -1,0 +1,9 @@
+version: 2
+seeds:
+  - name: product_categories
+    description: "Manual category mapping for demo polish."
+    columns:
+      - name: product_sku
+        tests: [not_null, unique]
+      - name: product_category
+        tests: [not_null]

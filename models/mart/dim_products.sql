@@ -1,12 +1,12 @@
--- models/mart/dim_products.sql
-WITH products AS (
-    SELECT
-        product_sku,
-        ANY_VALUE(product_name) AS product_name,
-        ANY_VALUE(product_category) AS product_category
-    FROM {{ ref('stg_hits_products') }}
-    WHERE product_sku IS NOT NULL
-    GROUP BY product_sku
-)
+{{ config(materialized='table') }}
 
-SELECT * FROM products
+with src as (
+  select
+    product_sku,
+    any_value(product_name)     as product_name,
+    any_value(product_category) as product_category
+  from {{ ref('stg_hits_products') }}
+  where product_sku is not null
+  group by product_sku
+)
+select * from src

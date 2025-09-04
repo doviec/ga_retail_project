@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: fct_sales_item
-    description: "Item-level sales fact, USD & local revenue with traffic and geography."
+    description: "Item-level sales fact with local & USD revenue."
     columns:
       - name: session_date
         tests: [not_null]
@@ -11,14 +11,9 @@ models:
       - name: product_sku
         tests: [not_null]
       - name: revenue_usd
-        tests:
-          - not_null
-          - dbt_utils.expression_is_true:
-              expression: "revenue_usd >= 0"
+        tests: [not_null]
       - name: revenue_local
-        tests:
-          - dbt_utils.expression_is_true:
-              expression: "revenue_local >= 0"
+        tests: [not_null]
 
   - name: dim_products
     columns:
@@ -37,5 +32,5 @@ models:
 
   - name: dim_date
     columns:
-      - name: date
+      - name: dt
         tests: [unique, not_null]

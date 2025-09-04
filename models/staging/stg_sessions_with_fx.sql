@@ -1,34 +1,33 @@
-with base as (
-    select *
-    from {{ ref('stg_sessions') }}
-),
-ccy as (
-    select country, currency
-    from {{ source('ext', 'country_currency') }}
+{{ config(materialized='view') }}
+
+with cc as (
+  select country, currency
+  from {{ source('ext', 'country_currency') }}
 ),
 fx as (
-    select rate_date, currency, rate_to_usd
-    from {{ source('ext', 'fx_rates') }}
+  select rate_date, currency, rate_to_usd
+  from {{ source('ext', 'fx_rates') }}
+),
+s as (
+  select *
+  from {{ ref('stg_sessions') }}
 )
 select
-    b.session_date,
-    b.visitor_id,
-    b.visit_id,
-    b.country,
-    b.traffic_source,
-    b.traffic_medium,
-    b.traffic_campaign,
-    b.visits,
-    b.transactions,
-    b.revenue_usd,
-    c.currency,
-    case
-        when b.revenue_usd is null then null
-        when c.currency = 'USD' then b.revenue_usd
-        else b.revenue_usd / nullif(f.rate_to_usd, 0)
-    end as revenue_local
-from base b
-left join ccy c
-  on c.country = b.country
-left join fx f
-  on f.rate_date = b.session_date and f.currency = c.currency
+  s.session_date,
+  s.visitor_id,
+  s.visit_id,
+  s.country,
+  s.traffic_source,
+  s.traffic_medium,
+  s.traffic_campaign,
+  s.visits,
+  s.transactions,
+  s.revenue_usd as session_revenue_usd_raw,  -- may be null
+  cc.currency    as local_currency,
+  fx.rate_to_usd
+from s
+left join cc
+  on lower(cc.country) = lower(s.country)
+left join fx
+  on fx.rate_date = s.session_date
+ and fx.currency  = cc.currency

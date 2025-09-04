@@ -1,0 +1,16 @@
+version: 2
+
+exposures:
+  - name: revenue_by_country_and_date
+    type: dashboard
+    maturity: high
+    url: https://lookerstudio.google.com/report/REPLACE_WITH_YOUR_REPORT_ID
+    description: "Revenue trend by country/date with top products."
+    depends_on:
+      - ref('fct_sales_item')
+      - ref('dim_country')
+      - ref('dim_products')
+      - ref('dim_date')
+    owner:
+      name: Data Team
+      email: you@example.com
