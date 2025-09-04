@@ -2,32 +2,37 @@
     materialized='incremental',
     unique_key=['session_date','visitor_id','visit_id','transaction_id','product_sku'],
     partition_by={'field': 'session_date', 'data_type': 'date'},
-    cluster_by=['country','product_sku','product_category']
+    cluster_by=['country','product_sku','product_category'],
+    maximum_bytes_billed=0
 ) }}
 
 with base as (
-  select * from {{ ref('int_sessions_enriched') }}
+  select
+    session_date,
+    visitor_id,
+    visit_id,
+    country,
+    traffic_source,
+    traffic_medium,
+    traffic_campaign,
+    transaction_id,
+    product_sku,
+    product_name,
+    product_category,
+    product_quantity,
+    product_price_usd,
+    revenue_usd,
+    revenue_local
+  from {{ ref('int_sessions_enriched') }}
+  -- Keep only true sales lines
+  where transaction_id is not null
+    and coalesce(revenue_usd, 0) > 0
+    and coalesce(product_quantity, 0) > 0
 )
 
-select
-  session_date,
-  visitor_id,
-  visit_id,
-  country,
-  traffic_source,
-  traffic_medium,
-  traffic_campaign,
-  transaction_id,
-  product_sku,
-  product_name,
-  product_category,
-  product_quantity,
-  product_price_usd,
-  revenue_usd,
-  revenue_local
-from base
+select * from base
 
 {% if is_incremental() %}
-  -- Only load new days on incremental runs
-  where session_date > (select ifnull(max(session_date), date('1980-01-01')) from {{ this }})
+  -- Only add days newer than what's already in the table
+  where session_date > (select ifnull(max(session_date), date('1900-01-01')) from {{ this }})
 {% endif %}

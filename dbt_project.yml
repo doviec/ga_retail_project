@@ -10,6 +10,7 @@ clean-targets: ["target", "dbt_packages"]
 
 models:
   ga_retail_project:
+    +maximum_bytes_billed: 0 # 0 = no cap for the query job
     staging:
       +schema: stg # Bronze
       +materialized: view
@@ -34,5 +35,5 @@ quoting:
 # Global variables
 # ----------------------------
 vars:
-  ga_start: "20160101"
-  ga_end: "20170831"
+  ga_start: "20160801"
+  ga_end: "20170801"

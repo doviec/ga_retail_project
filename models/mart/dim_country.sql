@@ -1,9 +1,9 @@
--- models/mart/dim_country.sql
-WITH countries AS (
-    SELECT
-        DISTINCT country,
-        currency
-    FROM {{ ref('stg_sessions_with_fx') }}
-)
+{{ config(materialized='table') }}
 
-SELECT * FROM countries
+-- Country ↔ Currency from ext mapping (avoid scanning GA)
+select distinct
+  initcap(country)        as country,
+  currency                as local_currency
+from {{ source('ext', 'country_currency') }}
+where country is not null
+  and currency is not null

@@ -1,11 +1,16 @@
--- models/mart/dim_visitors.sql
-WITH visitors AS (
-    SELECT
-        visitor_id,
-        COUNT(DISTINCT visit_id) AS total_sessions,
-        COUNT(DISTINCT transaction_id) AS total_transactions
-    FROM {{ ref('fct_sales_item') }}
-    GROUP BY visitor_id
+{{ config(materialized='table') }}
+
+-- Attribute-only visitor dimension. No additive measures here.
+with base as (
+  select
+    cast(visitor_id as string)                                as visitor_id,
+    min(session_date)                                         as first_seen_date,
+    max(session_date)                                         as last_seen_date,
+    any_value(country)                                        as last_country,  -- arbitrary but stable enough
+    any_value(traffic_source)                                 as last_source,
+    any_value(traffic_medium)                                 as last_medium
+  from {{ ref('stg_sessions') }}
+  group by visitor_id
 )
 
-SELECT * FROM visitors
+select * from base

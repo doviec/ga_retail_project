@@ -20,22 +20,24 @@ sources:
               - not_null
 
       - name: fx_rates
-        description: "Foreign exchange rates to USD (USD per 1 currency)."
-        # IMPORTANT: cast DATE -> TIMESTAMP for freshness checks
-        loaded_at_field: "TIMESTAMP(rate_date)"
+        description: "Foreign exchange rates to USD (USD per 1 currency). One row per (rate_date, currency)."
+        loaded_at_field: "TIMESTAMP(rate_date)" # DATE -> TIMESTAMP to satisfy dbt freshness
         freshness:
           warn_after: { count: 1, period: day }
           error_after: { count: 2, period: day }
         columns:
           - name: rate_date
-            description: "Date of FX rate."
+            description: "Calendar date the rate applies to."
             tests:
               - not_null
           - name: currency
-            description: "ISO currency code."
+            description: "ISO currency code (e.g., USD, EUR, ILS)."
             tests:
               - not_null
           - name: rate_to_usd
-            description: "Conversion rate: USD per 1 unit of currency."
+            description: "USD per 1 unit of 'currency'."
             tests:
               - not_null
+        tests:
+          - dbt_utils.unique_combination_of_columns:
+              combination_of_columns: [rate_date, currency]
