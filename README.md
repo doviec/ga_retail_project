@@ -63,12 +63,4 @@ The dashboard is divided into two pages:
   - Last Seen Date Trend (time series)  
   - Transactions by Campaign (bar chart)  
 
----
 
-## 🚀 How to Reproduce  
-1. Clone this repo.  
-2. Set up BigQuery and dbt (profiles.yml connection).  
-3. Run the models:  
-   ```bash
-   dbt run
-   dbt test
