@@ -32550,3 +32550,1922 @@ parsing.
 [0m01:42:01.558012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281E0926630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281E0E528D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281E12403B0>]}
 [0m01:42:01.558549 [debug] [MainThread]: Flushing usage events
 [0m01:42:02.821305 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:04:40.595662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021383BA42F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FFBE9D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021384BEFD90>]}
+
+
+============================== 02:04:40.600783 | 52b44fe5-6579-43ed-b287-144a9f0ad9e7 ==============================
+[0m02:04:40.600783 [info ] [MainThread]: Running with dbt=1.10.9
+[0m02:04:40.601648 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt run --full-refresh', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Projects\\ga_retail_project\\logs', 'profiles_dir': 'C:\\Users\\dovie\\.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m02:04:44.401522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021383EFF950>]}
+[0m02:04:44.476088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A867AF10>]}
+[0m02:04:44.476796 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m02:04:45.183259 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m02:04:45.344693 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m02:04:45.345331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A9CBDB50>]}
+[0m02:04:47.320035 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `dbt_utils.unique_combination_of_columns`.
+Arguments to generic tests should be nested under the `arguments` property.`
+[0m02:04:47.320835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A9ECE990>]}
+[0m02:04:47.481307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A9730E50>]}
+[0m02:04:47.618374 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Projects\ga_retail_project\target\manifest.json
+[0m02:04:47.621215 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Projects\ga_retail_project\target\semantic_manifest.json
+[0m02:04:47.658757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AA1C7BA0>]}
+[0m02:04:47.659270 [info ] [MainThread]: Found 12 models, 34 data tests, 1 seed, 2 sources, 1 exposure, 612 macros
+[0m02:04:47.659831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AA0FD490>]}
+[0m02:04:47.662519 [info ] [MainThread]: 
+[0m02:04:47.663062 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m02:04:47.663573 [info ] [MainThread]: 
+[0m02:04:47.664263 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:04:47.670118 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_e2e-dbt-project'
+[0m02:04:47.670749 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:04:47.671367 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_e2e-dbt-project'
+[0m02:04:47.671745 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:04:47.702590 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_e2e-dbt-project'
+[0m02:04:47.703173 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:04:49.778810 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_e2e-dbt-project_analytics_mart'
+[0m02:04:49.780430 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:04:49.781940 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_e2e-dbt-project_analytics_int'
+[0m02:04:49.784368 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_e2e-dbt-project_analytics_stg'
+[0m02:04:49.785544 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:04:49.787115 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:04:51.898695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AA1DA360>]}
+[0m02:04:51.899267 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:04:51.906893 [debug] [Thread-1 (]: Began running node model.ga_retail_project.dim_country
+[0m02:04:51.907940 [debug] [Thread-2 (]: Began running node model.ga_retail_project.stg_hits_products
+[0m02:04:51.908608 [debug] [Thread-3 (]: Began running node model.ga_retail_project.stg_sessions
+[0m02:04:51.909284 [info ] [Thread-1 (]: 1 of 12 START sql table model analytics_mart.dim_country ....................... [RUN]
+[0m02:04:51.909868 [info ] [Thread-2 (]: 2 of 12 START sql view model analytics_stg.stg_hits_products ................... [RUN]
+[0m02:04:51.911616 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.ga_retail_project.dim_country'
+[0m02:04:51.912292 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.ga_retail_project.stg_hits_products'
+[0m02:04:51.910702 [info ] [Thread-3 (]: 3 of 12 START sql view model analytics_stg.stg_sessions ........................ [RUN]
+[0m02:04:51.912986 [debug] [Thread-1 (]: Began compiling node model.ga_retail_project.dim_country
+[0m02:04:51.913659 [debug] [Thread-2 (]: Began compiling node model.ga_retail_project.stg_hits_products
+[0m02:04:51.914796 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.ga_retail_project.stg_sessions'
+[0m02:04:51.932219 [debug] [Thread-1 (]: Writing injected SQL for node "model.ga_retail_project.dim_country"
+[0m02:04:51.940122 [debug] [Thread-2 (]: Writing injected SQL for node "model.ga_retail_project.stg_hits_products"
+[0m02:04:51.940782 [debug] [Thread-3 (]: Began compiling node model.ga_retail_project.stg_sessions
+[0m02:04:51.945091 [debug] [Thread-3 (]: Writing injected SQL for node "model.ga_retail_project.stg_sessions"
+[0m02:04:51.945994 [debug] [Thread-1 (]: Began executing node model.ga_retail_project.dim_country
+[0m02:04:51.968206 [debug] [Thread-3 (]: Began executing node model.ga_retail_project.stg_sessions
+[0m02:04:51.970866 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m02:04:51.983080 [debug] [Thread-2 (]: Began executing node model.ga_retail_project.stg_hits_products
+[0m02:04:52.011276 [debug] [Thread-3 (]: Writing runtime sql for node "model.ga_retail_project.stg_sessions"
+[0m02:04:52.014817 [debug] [Thread-2 (]: Writing runtime sql for node "model.ga_retail_project.stg_hits_products"
+[0m02:04:52.048419 [debug] [Thread-2 (]: On model.ga_retail_project.stg_hits_products: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.stg_hits_products"} */
+
+
+  create or replace view e2e-dbt-project.analytics_stg.stg_hits_products
+  OPTIONS()
+  as 
+
+-- Unnest product-level hits over the date window controlled by vars.
+with base as (
+  select
+    parse_date('%Y%m%d', _TABLE_SUFFIX)              as session_date,
+    cast(fullVisitorId as string)                    as visitor_id,
+    cast(visitId as string)                          as visit_id,
+    geoNetwork.country                               as country,
+    trafficSource.source                             as traffic_source,
+    trafficSource.medium                             as traffic_medium,
+    trafficSource.campaign                           as traffic_campaign,
+    h.transaction.transactionId                      as transaction_id,
+    p.productSKU                                     as product_sku,
+    p.v2ProductName                                  as product_name,
+    p.v2ProductCategory                              as product_category,
+    p.productQuantity                                as product_quantity,
+    -- GA prices are in micros in the export; treat as "local" at this stage
+    safe_divide(p.productPrice, 1e6)                 as product_price_local,
+    safe_divide(h.transaction.transactionRevenue, 1e6) as item_revenue_local
+  from `bigquery-public-data.google_analytics_sample.ga_sessions_*`,
+       unnest(hits) as h,
+       unnest(h.product) as p
+  where _TABLE_SUFFIX between '20160801'
+                        and '20170801'
+    and p.productSKU is not null
+)
+select * from base;
+
+
+[0m02:04:52.049008 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m02:04:52.049884 [debug] [Thread-3 (]: On model.ga_retail_project.stg_sessions: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.stg_sessions"} */
+
+
+  create or replace view e2e-dbt-project.analytics_stg.stg_sessions
+  OPTIONS()
+  as 
+
+-- Pull sessions over a configurable date window using _TABLE_SUFFIX
+-- Usage example:
+--   dbt run --select stg_sessions --vars '{ga_start: "20170801", ga_end: "20170831"}'
+
+with src as (
+  select
+    -- Drive the session date from the shard suffix, not the row field
+    parse_date('%Y%m%d', _TABLE_SUFFIX)                as session_date,
+    cast(fullVisitorId as string)                      as visitor_id,
+    cast(visitId as string)                            as visit_id,
+    geoNetwork.country                                 as country,
+    trafficSource.source                               as traffic_source,
+    trafficSource.medium                               as traffic_medium,
+    trafficSource.campaign                             as traffic_campaign,
+    totals.visits                                      as visits,
+    totals.transactions                                as transactions,
+    safe_divide(totals.transactionRevenue, 1e6)        as revenue_usd   -- may be null
+  from `bigquery-public-data.google_analytics_sample.ga_sessions_*`
+where _TABLE_SUFFIX between '20160801'
+                        and '20170801'
+)
+
+select *
+from src;
+
+
+[0m02:04:52.050481 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m02:04:54.076773 [debug] [Thread-1 (]: Writing runtime sql for node "model.ga_retail_project.dim_country"
+[0m02:04:54.078066 [debug] [Thread-1 (]: On model.ga_retail_project.dim_country: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.dim_country"} */
+
+  
+    
+
+    create or replace table e2e-dbt-project.analytics_mart.dim_country
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+-- Country ↔ Currency from ext mapping (avoid scanning GA)
+select distinct
+  initcap(country)        as country,
+  currency                as local_currency
+from `e2e-dbt-project`.`ext`.`country_currency`
+where country is not null
+  and currency is not null
+    );
+  
+[0m02:04:54.359811 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:0245377e-ec4f-4b47-b279-600580ced47e&page=queryresults
+[0m02:04:54.361338 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:b3063400-2480-45f3-aac8-9b54bd81b82c&page=queryresults
+[0m02:04:54.709420 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:3845ac15-557d-4fb0-ae6f-38cc1fba65e8&page=queryresults
+[0m02:04:55.068912 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AA2A6990>]}
+[0m02:04:55.069431 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB8E0560>]}
+[0m02:04:55.070257 [info ] [Thread-2 (]: 2 of 12 OK created sql view model analytics_stg.stg_hits_products .............. [[32mCREATE VIEW (0 processed)[0m in 3.15s]
+[0m02:04:55.072177 [debug] [Thread-2 (]: Finished running node model.ga_retail_project.stg_hits_products
+[0m02:04:55.070989 [info ] [Thread-3 (]: 3 of 12 OK created sql view model analytics_stg.stg_sessions ................... [[32mCREATE VIEW (0 processed)[0m in 3.15s]
+[0m02:04:55.073810 [debug] [Thread-3 (]: Finished running node model.ga_retail_project.stg_sessions
+[0m02:04:55.074850 [debug] [Thread-4 (]: Began running node model.ga_retail_project.dim_date
+[0m02:04:55.075806 [debug] [Thread-2 (]: Began running node model.ga_retail_project.dim_visitors
+[0m02:04:55.075414 [info ] [Thread-4 (]: 4 of 12 START sql table model analytics_mart.dim_date .......................... [RUN]
+[0m02:04:55.077428 [debug] [Thread-3 (]: Began running node model.ga_retail_project.stg_sessions_with_fx
+[0m02:04:55.078126 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.ga_retail_project.dim_date'
+[0m02:04:55.076714 [info ] [Thread-2 (]: 5 of 12 START sql table model analytics_mart.dim_visitors ...................... [RUN]
+[0m02:04:55.079479 [debug] [Thread-4 (]: Began compiling node model.ga_retail_project.dim_date
+[0m02:04:55.078941 [info ] [Thread-3 (]: 6 of 12 START sql view model analytics_stg.stg_sessions_with_fx ................ [RUN]
+[0m02:04:55.080207 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ga_retail_project.stg_hits_products, now model.ga_retail_project.dim_visitors)
+[0m02:04:55.083759 [debug] [Thread-4 (]: Writing injected SQL for node "model.ga_retail_project.dim_date"
+[0m02:04:55.084512 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ga_retail_project.stg_sessions, now model.ga_retail_project.stg_sessions_with_fx)
+[0m02:04:55.085091 [debug] [Thread-2 (]: Began compiling node model.ga_retail_project.dim_visitors
+[0m02:04:55.085959 [debug] [Thread-3 (]: Began compiling node model.ga_retail_project.stg_sessions_with_fx
+[0m02:04:55.092359 [debug] [Thread-2 (]: Writing injected SQL for node "model.ga_retail_project.dim_visitors"
+[0m02:04:55.096647 [debug] [Thread-3 (]: Writing injected SQL for node "model.ga_retail_project.stg_sessions_with_fx"
+[0m02:04:55.097483 [debug] [Thread-4 (]: Began executing node model.ga_retail_project.dim_date
+[0m02:04:55.100221 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m02:04:55.101102 [debug] [Thread-3 (]: Began executing node model.ga_retail_project.stg_sessions_with_fx
+[0m02:04:55.105528 [debug] [Thread-3 (]: Writing runtime sql for node "model.ga_retail_project.stg_sessions_with_fx"
+[0m02:04:55.140293 [debug] [Thread-2 (]: Began executing node model.ga_retail_project.dim_visitors
+[0m02:04:55.145536 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:04:55.187044 [debug] [Thread-3 (]: On model.ga_retail_project.stg_sessions_with_fx: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.stg_sessions_with_fx"} */
+
+
+  create or replace view e2e-dbt-project.analytics_stg.stg_sessions_with_fx
+  OPTIONS()
+  as 
+
+with cc as (
+  select country, currency
+  from `e2e-dbt-project`.`ext`.`country_currency`
+),
+fx as (
+  select rate_date, currency, rate_to_usd
+  from `e2e-dbt-project`.`ext`.`fx_rates`
+),
+s as (
+  select *
+  from e2e-dbt-project.analytics_stg.stg_sessions
+)
+select
+  s.session_date,
+  s.visitor_id,
+  s.visit_id,
+  s.country,
+  s.traffic_source,
+  s.traffic_medium,
+  s.traffic_campaign,
+  s.visits,
+  s.transactions,
+  s.revenue_usd as session_revenue_usd_raw,  -- may be null
+  cc.currency    as local_currency,
+  fx.rate_to_usd
+from s
+left join cc
+  on lower(cc.country) = lower(s.country)
+left join fx
+  on fx.rate_date = s.session_date
+ and fx.currency  = cc.currency;
+
+
+[0m02:04:55.188712 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:04:56.986240 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AA20CF30>]}
+[0m02:04:56.987091 [info ] [Thread-1 (]: 1 of 12 OK created sql table model analytics_mart.dim_country .................. [[32mCREATE TABLE (7.0 rows, 110.0 Bytes processed)[0m in 5.07s]
+[0m02:04:56.988090 [debug] [Thread-1 (]: Finished running node model.ga_retail_project.dim_country
+[0m02:04:57.191972 [debug] [Thread-4 (]: Writing runtime sql for node "model.ga_retail_project.dim_date"
+[0m02:04:57.193069 [debug] [Thread-4 (]: On model.ga_retail_project.dim_date: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.dim_date"} */
+
+  
+    
+
+    create or replace table e2e-dbt-project.analytics_mart.dim_date
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+-- Simple, robust date dimension built from observed session dates
+select
+  session_date as dt
+from e2e-dbt-project.analytics_stg.stg_sessions
+where session_date is not null
+group by session_date
+    );
+  
+[0m02:04:57.262063 [debug] [Thread-2 (]: Writing runtime sql for node "model.ga_retail_project.dim_visitors"
+[0m02:04:57.263419 [debug] [Thread-2 (]: On model.ga_retail_project.dim_visitors: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.dim_visitors"} */
+
+  
+    
+
+    create or replace table e2e-dbt-project.analytics_mart.dim_visitors
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+-- Attribute-only visitor dimension. No additive measures here.
+with base as (
+  select
+    cast(visitor_id as string)                                as visitor_id,
+    min(session_date)                                         as first_seen_date,
+    max(session_date)                                         as last_seen_date,
+    any_value(country)                                        as last_country,  -- arbitrary but stable enough
+    any_value(traffic_source)                                 as last_source,
+    any_value(traffic_medium)                                 as last_medium
+  from e2e-dbt-project.analytics_stg.stg_sessions
+  group by visitor_id
+)
+
+select * from base
+    );
+  
+[0m02:04:57.702590 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:b3515a22-7956-4e49-b5e4-c47ca487af0a&page=queryresults
+[0m02:04:57.915200 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:17d037d1-4c08-488c-99a5-7df631825395&page=queryresults
+[0m02:04:57.964345 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:693c423d-5b14-44a2-8aff-69c0e02682f8&page=queryresults
+[0m02:04:58.241094 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB86E150>]}
+[0m02:04:58.242482 [info ] [Thread-3 (]: 6 of 12 OK created sql view model analytics_stg.stg_sessions_with_fx ........... [[32mCREATE VIEW (0 processed)[0m in 3.16s]
+[0m02:04:58.243762 [debug] [Thread-3 (]: Finished running node model.ga_retail_project.stg_sessions_with_fx
+[0m02:04:58.244539 [debug] [Thread-1 (]: Began running node model.ga_retail_project.int_sessions_enriched
+[0m02:04:58.245218 [info ] [Thread-1 (]: 7 of 12 START sql view model analytics_int.int_sessions_enriched ............... [RUN]
+[0m02:04:58.246004 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ga_retail_project.dim_country, now model.ga_retail_project.int_sessions_enriched)
+[0m02:04:58.246489 [debug] [Thread-1 (]: Began compiling node model.ga_retail_project.int_sessions_enriched
+[0m02:04:58.250912 [debug] [Thread-1 (]: Writing injected SQL for node "model.ga_retail_project.int_sessions_enriched"
+[0m02:04:58.252795 [debug] [Thread-1 (]: Began executing node model.ga_retail_project.int_sessions_enriched
+[0m02:04:58.257140 [debug] [Thread-1 (]: Writing runtime sql for node "model.ga_retail_project.int_sessions_enriched"
+[0m02:04:58.258900 [debug] [Thread-1 (]: On model.ga_retail_project.int_sessions_enriched: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.int_sessions_enriched"} */
+
+
+  create or replace view e2e-dbt-project.analytics_int.int_sessions_enriched
+  OPTIONS()
+  as 
+
+-- Silver: join item-level hits with session-day FX, compute USD metrics.
+with sess as (
+  select *
+  from e2e-dbt-project.analytics_stg.stg_sessions_with_fx
+),
+items as (
+  select
+    session_date,
+    visitor_id,
+    visit_id,
+    country,
+    traffic_source,
+    traffic_medium,
+    traffic_campaign,
+    transaction_id,
+    product_sku,
+    product_name,
+    product_category,
+    product_quantity,
+    -- local currency amounts from staging
+    product_price_local,
+    item_revenue_local
+  from e2e-dbt-project.analytics_stg.stg_hits_products
+),
+joined as (
+  select
+    i.session_date,
+    i.visitor_id,
+    i.visit_id,
+    i.country,
+    s.traffic_source,
+    s.traffic_medium,
+    s.traffic_campaign,
+    i.transaction_id,
+    i.product_sku,
+    i.product_name,
+    i.product_category,
+    i.product_quantity,
+    i.product_price_local,
+    coalesce(i.item_revenue_local, i.product_quantity * i.product_price_local) as revenue_local,
+    -- FX conversion at session_date granularity
+    (i.product_price_local * s.rate_to_usd) as product_price_usd,
+    (coalesce(i.item_revenue_local, i.product_quantity * i.product_price_local) * s.rate_to_usd) as revenue_usd,
+    s.rate_to_usd,
+    s.local_currency
+  from items i
+  left join sess s
+    on s.session_date = i.session_date
+   and s.visitor_id   = i.visitor_id
+   and s.visit_id     = i.visit_id
+   and lower(s.country) = lower(i.country)
+)
+
+select * from joined;
+
+
+[0m02:04:58.259650 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:05:00.394761 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:b3ca4e6a-de19-4ce4-9318-265acee38fe3&page=queryresults
+[0m02:05:01.009247 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB86E990>]}
+[0m02:05:01.010365 [info ] [Thread-1 (]: 7 of 12 OK created sql view model analytics_int.int_sessions_enriched .......... [[32mCREATE VIEW (0 processed)[0m in 2.76s]
+[0m02:05:01.011820 [debug] [Thread-1 (]: Finished running node model.ga_retail_project.int_sessions_enriched
+[0m02:05:01.012894 [debug] [Thread-3 (]: Began running node model.ga_retail_project.fct_sales_item
+[0m02:05:01.013711 [info ] [Thread-3 (]: 8 of 12 START sql incremental model analytics_mart.fct_sales_item .............. [RUN]
+[0m02:05:01.014588 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ga_retail_project.stg_sessions_with_fx, now model.ga_retail_project.fct_sales_item)
+[0m02:05:01.015654 [debug] [Thread-3 (]: Began compiling node model.ga_retail_project.fct_sales_item
+[0m02:05:01.028113 [debug] [Thread-3 (]: Writing injected SQL for node "model.ga_retail_project.fct_sales_item"
+[0m02:05:01.029675 [debug] [Thread-3 (]: Began executing node model.ga_retail_project.fct_sales_item
+[0m02:05:01.095197 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:05:03.014811 [debug] [Thread-3 (]: Writing runtime sql for node "model.ga_retail_project.fct_sales_item"
+[0m02:05:03.016386 [debug] [Thread-3 (]: On model.ga_retail_project.fct_sales_item: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.fct_sales_item"} */
+
+  
+    
+
+    create or replace table e2e-dbt-project.analytics_mart.fct_sales_item
+      
+    partition by session_date
+    cluster by country, product_sku, product_category
+
+    
+    OPTIONS()
+    as (
+      
+
+with base as (
+  select
+    session_date,
+    visitor_id,
+    visit_id,
+    country,
+    traffic_source,
+    traffic_medium,
+    traffic_campaign,
+    transaction_id,
+    product_sku,
+    product_name,
+    product_category,
+    product_quantity,
+    product_price_usd,
+    revenue_usd,
+    revenue_local
+  from e2e-dbt-project.analytics_int.int_sessions_enriched
+  -- Keep only true sales lines
+  where transaction_id is not null
+    and coalesce(revenue_usd, 0) > 0
+    and coalesce(product_quantity, 0) > 0
+)
+
+select * from base
+
+
+    );
+  
+[0m02:05:03.948279 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:29f259f8-25e8-4fb0-b478-3e58964f9044&page=queryresults
+[0m02:05:14.512531 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB86D4F0>]}
+[0m02:05:14.513354 [info ] [Thread-4 (]: 4 of 12 OK created sql table model analytics_mart.dim_date ..................... [[32mCREATE TABLE (366.0 rows, 0 processed)[0m in 19.43s]
+[0m02:05:14.514566 [debug] [Thread-4 (]: Finished running node model.ga_retail_project.dim_date
+[0m02:05:17.621774 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB86DD30>]}
+[0m02:05:17.623545 [info ] [Thread-2 (]: 5 of 12 OK created sql table model analytics_mart.dim_visitors ................. [[32mCREATE TABLE (714.2k rows, 44.8 MiB processed)[0m in 22.54s]
+[0m02:05:17.625908 [debug] [Thread-2 (]: Finished running node model.ga_retail_project.dim_visitors
+[0m02:05:23.265089 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB86D1F0>]}
+[0m02:05:23.266516 [info ] [Thread-3 (]: 8 of 12 OK created sql incremental model analytics_mart.fct_sales_item ......... [[32mCREATE TABLE (35.4k rows, 1.5 GiB processed)[0m in 22.25s]
+[0m02:05:23.268693 [debug] [Thread-3 (]: Finished running node model.ga_retail_project.fct_sales_item
+[0m02:05:23.270264 [debug] [Thread-2 (]: Began running node model.ga_retail_project.vw_sales_by_date
+[0m02:05:23.271170 [debug] [Thread-4 (]: Began running node model.ga_retail_project.vw_sales_by_country
+[0m02:05:23.272003 [debug] [Thread-3 (]: Began running node model.ga_retail_project.vw_sales_by_product
+[0m02:05:23.272867 [debug] [Thread-1 (]: Began running node model.ga_retail_project.dim_products
+[0m02:05:23.274067 [info ] [Thread-2 (]: 11 of 12 START sql view model analytics_mart.vw_sales_by_date .................. [RUN]
+[0m02:05:23.275417 [info ] [Thread-4 (]: 10 of 12 START sql view model analytics_mart.vw_sales_by_country ............... [RUN]
+[0m02:05:23.278331 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ga_retail_project.dim_visitors, now model.ga_retail_project.vw_sales_by_date)
+[0m02:05:23.279308 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ga_retail_project.dim_date, now model.ga_retail_project.vw_sales_by_country)
+[0m02:05:23.276593 [info ] [Thread-3 (]: 12 of 12 START sql view model analytics_mart.vw_sales_by_product ............... [RUN]
+[0m02:05:23.280036 [debug] [Thread-2 (]: Began compiling node model.ga_retail_project.vw_sales_by_date
+[0m02:05:23.280658 [debug] [Thread-4 (]: Began compiling node model.ga_retail_project.vw_sales_by_country
+[0m02:05:23.277729 [info ] [Thread-1 (]: 9 of 12 START sql table model analytics_mart.dim_products ...................... [RUN]
+[0m02:05:23.281455 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ga_retail_project.fct_sales_item, now model.ga_retail_project.vw_sales_by_product)
+[0m02:05:23.288075 [debug] [Thread-2 (]: Writing injected SQL for node "model.ga_retail_project.vw_sales_by_date"
+[0m02:05:23.293824 [debug] [Thread-4 (]: Writing injected SQL for node "model.ga_retail_project.vw_sales_by_country"
+[0m02:05:23.294419 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ga_retail_project.int_sessions_enriched, now model.ga_retail_project.dim_products)
+[0m02:05:23.294925 [debug] [Thread-3 (]: Began compiling node model.ga_retail_project.vw_sales_by_product
+[0m02:05:23.295656 [debug] [Thread-1 (]: Began compiling node model.ga_retail_project.dim_products
+[0m02:05:23.299966 [debug] [Thread-3 (]: Writing injected SQL for node "model.ga_retail_project.vw_sales_by_product"
+[0m02:05:23.305787 [debug] [Thread-1 (]: Writing injected SQL for node "model.ga_retail_project.dim_products"
+[0m02:05:23.306772 [debug] [Thread-2 (]: Began executing node model.ga_retail_project.vw_sales_by_date
+[0m02:05:23.307607 [debug] [Thread-4 (]: Began executing node model.ga_retail_project.vw_sales_by_country
+[0m02:05:23.310495 [debug] [Thread-2 (]: Writing runtime sql for node "model.ga_retail_project.vw_sales_by_date"
+[0m02:05:23.313369 [debug] [Thread-4 (]: Writing runtime sql for node "model.ga_retail_project.vw_sales_by_country"
+[0m02:05:23.314307 [debug] [Thread-3 (]: Began executing node model.ga_retail_project.vw_sales_by_product
+[0m02:05:23.318143 [debug] [Thread-3 (]: Writing runtime sql for node "model.ga_retail_project.vw_sales_by_product"
+[0m02:05:23.318989 [debug] [Thread-1 (]: Began executing node model.ga_retail_project.dim_products
+[0m02:05:23.322056 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:05:23.322848 [debug] [Thread-2 (]: On model.ga_retail_project.vw_sales_by_date: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.vw_sales_by_date"} */
+
+
+  create or replace view e2e-dbt-project.analytics_mart.vw_sales_by_date
+  OPTIONS()
+  as 
+
+select
+  session_date                                        as dt,
+  sum(revenue_usd)                                    as revenue_usd,
+  sum(revenue_local)                                  as revenue_local,
+  count(distinct transaction_id)                      as orders,
+  count(distinct visitor_id)                          as visitors,
+  safe_divide(sum(revenue_usd), count(distinct transaction_id)) as aov_usd
+from e2e-dbt-project.analytics_mart.fct_sales_item
+group by dt;
+
+
+[0m02:05:23.323489 [debug] [Thread-4 (]: On model.ga_retail_project.vw_sales_by_country: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.vw_sales_by_country"} */
+
+
+  create or replace view e2e-dbt-project.analytics_mart.vw_sales_by_country
+  OPTIONS()
+  as 
+
+select
+  country,
+  session_date                                        as dt,
+  sum(revenue_usd)                                    as revenue_usd,
+  sum(revenue_local)                                  as revenue_local,
+  count(distinct transaction_id)                      as orders,
+  safe_divide(sum(revenue_usd), count(distinct transaction_id)) as aov_usd
+from e2e-dbt-project.analytics_mart.fct_sales_item
+group by country, dt;
+
+
+[0m02:05:23.324223 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:05:23.325896 [debug] [Thread-3 (]: On model.ga_retail_project.vw_sales_by_product: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.vw_sales_by_product"} */
+
+
+  create or replace view e2e-dbt-project.analytics_mart.vw_sales_by_product
+  OPTIONS()
+  as 
+
+select
+  product_sku,
+  product_name,
+  product_category,
+  session_date                                        as dt,
+  sum(revenue_usd)                                    as revenue_usd,
+  sum(revenue_local)                                  as revenue_local,
+  sum(product_quantity)                               as units,
+  count(distinct transaction_id)                      as orders
+from e2e-dbt-project.analytics_mart.fct_sales_item
+group by product_sku, product_name, product_category, dt;
+
+
+[0m02:05:23.326359 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:05:23.357480 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:05:25.403636 [debug] [Thread-1 (]: Writing runtime sql for node "model.ga_retail_project.dim_products"
+[0m02:05:25.408421 [debug] [Thread-1 (]: On model.ga_retail_project.dim_products: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "model.ga_retail_project.dim_products"} */
+
+  
+    
+
+    create or replace table e2e-dbt-project.analytics_mart.dim_products
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+with base as (
+  select
+    product_sku,
+    any_value(product_name)     as product_name,
+    any_value(product_category) as product_category
+  from e2e-dbt-project.analytics_mart.fct_sales_item
+  group by product_sku
+)
+select * from base
+    );
+  
+[0m02:05:25.630593 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:69bb92fb-4a3b-42e9-9a46-9bc8511dcc94&page=queryresults
+[0m02:05:25.789730 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:5084644d-fded-45be-ba0b-50774cc763ff&page=queryresults
+[0m02:05:25.870453 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:97ad7547-2d5a-44c8-9b23-65ae13cb4649&page=queryresults
+[0m02:05:25.961007 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:b1bcbb48-b6f6-404d-84dd-78f47f064a9e&page=queryresults
+[0m02:05:26.227774 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB9B2E10>]}
+[0m02:05:26.230545 [info ] [Thread-4 (]: 10 of 12 OK created sql view model analytics_mart.vw_sales_by_country .......... [[32mCREATE VIEW (0 processed)[0m in 2.95s]
+[0m02:05:26.235810 [debug] [Thread-4 (]: Finished running node model.ga_retail_project.vw_sales_by_country
+[0m02:05:26.358363 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB9B03B0>]}
+[0m02:05:26.359201 [info ] [Thread-3 (]: 12 of 12 OK created sql view model analytics_mart.vw_sales_by_product .......... [[32mCREATE VIEW (0 processed)[0m in 3.08s]
+[0m02:05:26.360233 [debug] [Thread-3 (]: Finished running node model.ga_retail_project.vw_sales_by_product
+[0m02:05:26.416599 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB9B2ED0>]}
+[0m02:05:26.417432 [info ] [Thread-2 (]: 11 of 12 OK created sql view model analytics_mart.vw_sales_by_date ............. [[32mCREATE VIEW (0 processed)[0m in 3.14s]
+[0m02:05:26.418628 [debug] [Thread-2 (]: Finished running node model.ga_retail_project.vw_sales_by_date
+[0m02:05:29.385849 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52b44fe5-6579-43ed-b287-144a9f0ad9e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB9B3770>]}
+[0m02:05:29.388595 [info ] [Thread-1 (]: 9 of 12 OK created sql table model analytics_mart.dim_products ................. [[32mCREATE TABLE (1.1k rows, 2.0 MiB processed)[0m in 6.09s]
+[0m02:05:29.392244 [debug] [Thread-1 (]: Finished running node model.ga_retail_project.dim_products
+[0m02:05:29.396225 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:05:29.406171 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:05:29.407050 [debug] [MainThread]: Connection 'list_e2e-dbt-project' was properly closed.
+[0m02:05:29.407934 [debug] [MainThread]: Connection 'list_e2e-dbt-project' was properly closed.
+[0m02:05:29.408880 [debug] [MainThread]: Connection 'list_e2e-dbt-project' was properly closed.
+[0m02:05:29.410034 [debug] [MainThread]: Connection 'list_e2e-dbt-project_analytics_mart' was properly closed.
+[0m02:05:29.410803 [debug] [MainThread]: Connection 'list_e2e-dbt-project_analytics_int' was properly closed.
+[0m02:05:29.411617 [debug] [MainThread]: Connection 'list_e2e-dbt-project_analytics_stg' was properly closed.
+[0m02:05:29.412321 [debug] [MainThread]: Connection 'model.ga_retail_project.dim_products' was properly closed.
+[0m02:05:29.413093 [debug] [MainThread]: Connection 'model.ga_retail_project.vw_sales_by_date' was properly closed.
+[0m02:05:29.413779 [debug] [MainThread]: Connection 'model.ga_retail_project.vw_sales_by_product' was properly closed.
+[0m02:05:29.414445 [debug] [MainThread]: Connection 'model.ga_retail_project.vw_sales_by_country' was properly closed.
+[0m02:05:29.415333 [info ] [MainThread]: 
+[0m02:05:29.416176 [info ] [MainThread]: Finished running 1 incremental model, 4 table models, 7 view models in 0 hours 0 minutes and 41.75 seconds (41.75s).
+[0m02:05:29.419931 [debug] [MainThread]: Command end result
+[0m02:05:29.487849 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Projects\ga_retail_project\target\manifest.json
+[0m02:05:29.490883 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Projects\ga_retail_project\target\semantic_manifest.json
+[0m02:05:29.498501 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Projects\ga_retail_project\target\run_results.json
+[0m02:05:29.498915 [info ] [MainThread]: 
+[0m02:05:29.499571 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:05:29.500144 [info ] [MainThread]: 
+[0m02:05:29.500710 [info ] [MainThread]: Done. PASS=12 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=12
+[0m02:05:29.501749 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m02:05:29.503977 [debug] [MainThread]: Command `dbt run` succeeded at 02:05:29.503785 after 49.12 seconds
+[0m02:05:29.504450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A9F94770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AA285A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213AB86D9D0>]}
+[0m02:05:29.504883 [debug] [MainThread]: Flushing usage events
+[0m02:05:31.705735 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:05:35.321347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A77A8942F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A77852DD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A77B8DFD90>]}
+
+
+============================== 02:05:35.327252 | 8cbed08d-5117-46f9-b2b7-9c36d2dffeb6 ==============================
+[0m02:05:35.327252 [info ] [MainThread]: Running with dbt=1.10.9
+[0m02:05:35.328178 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt test', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'printer_width': '80', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Projects\\ga_retail_project\\logs', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\dovie\\.dbt'}
+[0m02:05:38.839572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8cbed08d-5117-46f9-b2b7-9c36d2dffeb6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A77ABF3950>]}
+[0m02:05:38.911100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8cbed08d-5117-46f9-b2b7-9c36d2dffeb6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7203B2F10>]}
+[0m02:05:38.911817 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m02:05:39.630777 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m02:05:39.884769 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:05:39.885144 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:05:39.951921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8cbed08d-5117-46f9-b2b7-9c36d2dffeb6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A72040D450>]}
+[0m02:05:40.082265 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Projects\ga_retail_project\target\manifest.json
+[0m02:05:40.084927 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Projects\ga_retail_project\target\semantic_manifest.json
+[0m02:05:40.131666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8cbed08d-5117-46f9-b2b7-9c36d2dffeb6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A720BF7020>]}
+[0m02:05:40.132173 [info ] [MainThread]: Found 12 models, 34 data tests, 1 seed, 2 sources, 1 exposure, 612 macros
+[0m02:05:40.132788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8cbed08d-5117-46f9-b2b7-9c36d2dffeb6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A720BEEF90>]}
+[0m02:05:40.136893 [info ] [MainThread]: 
+[0m02:05:40.137515 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m02:05:40.138046 [info ] [MainThread]: 
+[0m02:05:40.138840 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:05:40.143989 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_e2e-dbt-project_analytics_mart'
+[0m02:05:40.144511 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:05:40.174853 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_e2e-dbt-project_analytics_stg'
+[0m02:05:40.175359 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:05:40.206047 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_e2e-dbt-project_analytics_int'
+[0m02:05:40.206469 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:05:42.192807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8cbed08d-5117-46f9-b2b7-9c36d2dffeb6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A720C5BD40>]}
+[0m02:05:42.194108 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:05:42.204527 [debug] [Thread-1 (]: Began running node test.ga_retail_project.dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency.76d53d14fe
+[0m02:05:42.205558 [debug] [Thread-3 (]: Began running node test.ga_retail_project.not_null_dim_country_country.efd0998505
+[0m02:05:42.206241 [debug] [Thread-4 (]: Began running node test.ga_retail_project.not_null_dim_date_dt.58a291f69b
+[0m02:05:42.206834 [debug] [Thread-2 (]: Began running node test.ga_retail_project.dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date.1a7095a027
+[0m02:05:42.207336 [info ] [Thread-1 (]: 1 of 34 START test dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency  [RUN]
+[0m02:05:42.207958 [info ] [Thread-3 (]: 3 of 34 START test not_null_dim_country_country ................................ [RUN]
+[0m02:05:42.210568 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.ga_retail_project.dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency.76d53d14fe'
+[0m02:05:42.208916 [info ] [Thread-4 (]: 4 of 34 START test not_null_dim_date_dt ........................................ [RUN]
+[0m02:05:42.211627 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.ga_retail_project.not_null_dim_country_country.efd0998505'
+[0m02:05:42.212568 [debug] [Thread-1 (]: Began compiling node test.ga_retail_project.dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency.76d53d14fe
+[0m02:05:42.209802 [info ] [Thread-2 (]: 2 of 34 START test dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date  [RUN]
+[0m02:05:42.213626 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.ga_retail_project.not_null_dim_date_dt.58a291f69b'
+[0m02:05:42.214126 [debug] [Thread-3 (]: Began compiling node test.ga_retail_project.not_null_dim_country_country.efd0998505
+[0m02:05:42.237766 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.ga_retail_project.dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date.1a7095a027'
+[0m02:05:42.244674 [debug] [Thread-1 (]: Writing injected SQL for node "test.ga_retail_project.dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency.76d53d14fe"
+[0m02:05:42.245395 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.not_null_dim_date_dt.58a291f69b
+[0m02:05:42.258144 [debug] [Thread-3 (]: Writing injected SQL for node "test.ga_retail_project.not_null_dim_country_country.efd0998505"
+[0m02:05:42.259015 [debug] [Thread-2 (]: Began compiling node test.ga_retail_project.dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date.1a7095a027
+[0m02:05:42.265323 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.not_null_dim_date_dt.58a291f69b"
+[0m02:05:42.273884 [debug] [Thread-2 (]: Writing injected SQL for node "test.ga_retail_project.dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date.1a7095a027"
+[0m02:05:42.275437 [debug] [Thread-1 (]: Began executing node test.ga_retail_project.dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency.76d53d14fe
+[0m02:05:42.308683 [debug] [Thread-1 (]: Writing runtime sql for node "test.ga_retail_project.dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency.76d53d14fe"
+[0m02:05:42.309430 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.not_null_dim_date_dt.58a291f69b
+[0m02:05:42.312680 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.not_null_dim_date_dt.58a291f69b"
+[0m02:05:42.313466 [debug] [Thread-3 (]: Began executing node test.ga_retail_project.not_null_dim_country_country.efd0998505
+[0m02:05:42.316592 [debug] [Thread-3 (]: Writing runtime sql for node "test.ga_retail_project.not_null_dim_country_country.efd0998505"
+[0m02:05:42.317524 [debug] [Thread-2 (]: Began executing node test.ga_retail_project.dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date.1a7095a027
+[0m02:05:42.320983 [debug] [Thread-2 (]: Writing runtime sql for node "test.ga_retail_project.dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date.1a7095a027"
+[0m02:05:42.322255 [debug] [Thread-3 (]: On test.ga_retail_project.not_null_dim_country_country.efd0998505: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_dim_country_country.efd0998505"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select country
+from e2e-dbt-project.analytics_mart.dim_country
+where country is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:42.323028 [debug] [Thread-4 (]: On test.ga_retail_project.not_null_dim_date_dt.58a291f69b: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_dim_date_dt.58a291f69b"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select dt
+from e2e-dbt-project.analytics_mart.dim_date
+where dt is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:42.324069 [debug] [Thread-1 (]: On test.ga_retail_project.dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency.76d53d14fe: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency.76d53d14fe"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+with validation_errors as (
+
+    select
+        rate_date, currency
+    from `e2e-dbt-project`.`ext`.`fx_rates`
+    group by rate_date, currency
+    having count(*) > 1
+
+)
+
+select *
+from validation_errors
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:42.324844 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m02:05:42.325453 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m02:05:42.326016 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m02:05:42.326577 [debug] [Thread-2 (]: On test.ga_retail_project.dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date.1a7095a027: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date.1a7095a027"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+with validation_errors as (
+
+    select
+        visitor_id, visit_id, session_date
+    from e2e-dbt-project.analytics_stg.stg_sessions
+    group by visitor_id, visit_id, session_date
+    having count(*) > 1
+
+)
+
+select *
+from validation_errors
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:42.327544 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m02:05:44.902802 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:cec0917f-6f8f-43b5-a373-62098ece09d4&page=queryresults
+[0m02:05:44.952470 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:81560690-9043-4b5c-80f2-7565455e8e7e&page=queryresults
+[0m02:05:45.012164 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:b2659333-2b85-440e-9c47-e4cb379c8f79&page=queryresults
+[0m02:05:45.271338 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:4521898b-363d-4383-b7d5-829b5bd81ad8&page=queryresults
+[0m02:05:45.915670 [info ] [Thread-3 (]: 3 of 34 PASS not_null_dim_country_country ...................................... [[32mPASS[0m in 3.70s]
+[0m02:05:45.921968 [debug] [Thread-3 (]: Finished running node test.ga_retail_project.not_null_dim_country_country.efd0998505
+[0m02:05:45.923072 [debug] [Thread-3 (]: Began running node test.ga_retail_project.not_null_dim_products_product_sku.1098c1a343
+[0m02:05:45.924682 [info ] [Thread-3 (]: 5 of 34 START test not_null_dim_products_product_sku ........................... [RUN]
+[0m02:05:45.926049 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_dim_country_country.efd0998505, now test.ga_retail_project.not_null_dim_products_product_sku.1098c1a343)
+[0m02:05:45.927064 [debug] [Thread-3 (]: Began compiling node test.ga_retail_project.not_null_dim_products_product_sku.1098c1a343
+[0m02:05:45.934152 [debug] [Thread-3 (]: Writing injected SQL for node "test.ga_retail_project.not_null_dim_products_product_sku.1098c1a343"
+[0m02:05:45.945841 [info ] [Thread-4 (]: 4 of 34 PASS not_null_dim_date_dt .............................................. [[32mPASS[0m in 3.73s]
+[0m02:05:45.946711 [debug] [Thread-3 (]: Began executing node test.ga_retail_project.not_null_dim_products_product_sku.1098c1a343
+[0m02:05:45.947464 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.not_null_dim_date_dt.58a291f69b
+[0m02:05:45.950571 [debug] [Thread-3 (]: Writing runtime sql for node "test.ga_retail_project.not_null_dim_products_product_sku.1098c1a343"
+[0m02:05:45.951219 [debug] [Thread-4 (]: Began running node test.ga_retail_project.not_null_dim_visitors_visitor_id.c034ca95d3
+[0m02:05:45.952566 [info ] [Thread-4 (]: 6 of 34 START test not_null_dim_visitors_visitor_id ............................ [RUN]
+[0m02:05:45.953617 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_dim_date_dt.58a291f69b, now test.ga_retail_project.not_null_dim_visitors_visitor_id.c034ca95d3)
+[0m02:05:45.954205 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.not_null_dim_visitors_visitor_id.c034ca95d3
+[0m02:05:45.959257 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.not_null_dim_visitors_visitor_id.c034ca95d3"
+[0m02:05:45.960229 [debug] [Thread-3 (]: On test.ga_retail_project.not_null_dim_products_product_sku.1098c1a343: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_dim_products_product_sku.1098c1a343"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_sku
+from e2e-dbt-project.analytics_mart.dim_products
+where product_sku is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:45.960980 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:05:45.996585 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.not_null_dim_visitors_visitor_id.c034ca95d3
+[0m02:05:46.000525 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.not_null_dim_visitors_visitor_id.c034ca95d3"
+[0m02:05:46.003042 [debug] [Thread-4 (]: On test.ga_retail_project.not_null_dim_visitors_visitor_id.c034ca95d3: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_dim_visitors_visitor_id.c034ca95d3"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select visitor_id
+from e2e-dbt-project.analytics_mart.dim_visitors
+where visitor_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:46.004105 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:05:46.243746 [info ] [Thread-1 (]: 1 of 34 PASS dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency  [[32mPASS[0m in 4.03s]
+[0m02:05:46.244694 [debug] [Thread-1 (]: Finished running node test.ga_retail_project.dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency.76d53d14fe
+[0m02:05:46.245248 [debug] [Thread-1 (]: Began running node test.ga_retail_project.not_null_fct_sales_item_product_sku.c32f68e54e
+[0m02:05:46.245755 [info ] [Thread-1 (]: 7 of 34 START test not_null_fct_sales_item_product_sku ......................... [RUN]
+[0m02:05:46.246382 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.dbt_utils_source_unique_combination_of_columns_ext_fx_rates_rate_date__currency.76d53d14fe, now test.ga_retail_project.not_null_fct_sales_item_product_sku.c32f68e54e)
+[0m02:05:46.246776 [debug] [Thread-1 (]: Began compiling node test.ga_retail_project.not_null_fct_sales_item_product_sku.c32f68e54e
+[0m02:05:46.250830 [debug] [Thread-1 (]: Writing injected SQL for node "test.ga_retail_project.not_null_fct_sales_item_product_sku.c32f68e54e"
+[0m02:05:46.252266 [debug] [Thread-1 (]: Began executing node test.ga_retail_project.not_null_fct_sales_item_product_sku.c32f68e54e
+[0m02:05:46.255059 [debug] [Thread-1 (]: Writing runtime sql for node "test.ga_retail_project.not_null_fct_sales_item_product_sku.c32f68e54e"
+[0m02:05:46.256140 [debug] [Thread-1 (]: On test.ga_retail_project.not_null_fct_sales_item_product_sku.c32f68e54e: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_fct_sales_item_product_sku.c32f68e54e"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_sku
+from e2e-dbt-project.analytics_mart.fct_sales_item
+where product_sku is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:46.256845 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:05:48.283037 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:75194427-a2a7-46da-8c54-0191abfda792&page=queryresults
+[0m02:05:48.425679 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:f1c6e90e-aafb-44ae-bfb5-ed8cf5d3dad9&page=queryresults
+[0m02:05:49.026542 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:742537f8-4518-4b39-af9f-23e589133ab1&page=queryresults
+[0m02:05:49.329605 [info ] [Thread-4 (]: 6 of 34 PASS not_null_dim_visitors_visitor_id .................................. [[32mPASS[0m in 3.38s]
+[0m02:05:49.336942 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.not_null_dim_visitors_visitor_id.c034ca95d3
+[0m02:05:49.338867 [debug] [Thread-4 (]: Began running node test.ga_retail_project.not_null_fct_sales_item_revenue_local.7b5a88f392
+[0m02:05:49.341547 [info ] [Thread-4 (]: 8 of 34 START test not_null_fct_sales_item_revenue_local ....................... [RUN]
+[0m02:05:49.344838 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_dim_visitors_visitor_id.c034ca95d3, now test.ga_retail_project.not_null_fct_sales_item_revenue_local.7b5a88f392)
+[0m02:05:49.346978 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.not_null_fct_sales_item_revenue_local.7b5a88f392
+[0m02:05:49.357627 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.not_null_fct_sales_item_revenue_local.7b5a88f392"
+[0m02:05:49.359566 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.not_null_fct_sales_item_revenue_local.7b5a88f392
+[0m02:05:49.367592 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.not_null_fct_sales_item_revenue_local.7b5a88f392"
+[0m02:05:49.370341 [debug] [Thread-4 (]: On test.ga_retail_project.not_null_fct_sales_item_revenue_local.7b5a88f392: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_fct_sales_item_revenue_local.7b5a88f392"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select revenue_local
+from e2e-dbt-project.analytics_mart.fct_sales_item
+where revenue_local is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:49.371259 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:05:49.427465 [info ] [Thread-3 (]: 5 of 34 PASS not_null_dim_products_product_sku ................................. [[32mPASS[0m in 3.50s]
+[0m02:05:49.428599 [debug] [Thread-3 (]: Finished running node test.ga_retail_project.not_null_dim_products_product_sku.1098c1a343
+[0m02:05:49.429116 [debug] [Thread-3 (]: Began running node test.ga_retail_project.not_null_fct_sales_item_revenue_usd.3a4855d5fc
+[0m02:05:49.429718 [info ] [Thread-3 (]: 9 of 34 START test not_null_fct_sales_item_revenue_usd ......................... [RUN]
+[0m02:05:49.430446 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_dim_products_product_sku.1098c1a343, now test.ga_retail_project.not_null_fct_sales_item_revenue_usd.3a4855d5fc)
+[0m02:05:49.430928 [debug] [Thread-3 (]: Began compiling node test.ga_retail_project.not_null_fct_sales_item_revenue_usd.3a4855d5fc
+[0m02:05:49.435908 [debug] [Thread-3 (]: Writing injected SQL for node "test.ga_retail_project.not_null_fct_sales_item_revenue_usd.3a4855d5fc"
+[0m02:05:49.437688 [debug] [Thread-3 (]: Began executing node test.ga_retail_project.not_null_fct_sales_item_revenue_usd.3a4855d5fc
+[0m02:05:49.441492 [debug] [Thread-3 (]: Writing runtime sql for node "test.ga_retail_project.not_null_fct_sales_item_revenue_usd.3a4855d5fc"
+[0m02:05:49.442801 [debug] [Thread-3 (]: On test.ga_retail_project.not_null_fct_sales_item_revenue_usd.3a4855d5fc: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_fct_sales_item_revenue_usd.3a4855d5fc"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select revenue_usd
+from e2e-dbt-project.analytics_mart.fct_sales_item
+where revenue_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:49.443617 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:05:49.939040 [info ] [Thread-1 (]: 7 of 34 PASS not_null_fct_sales_item_product_sku ............................... [[32mPASS[0m in 3.69s]
+[0m02:05:49.940070 [debug] [Thread-1 (]: Finished running node test.ga_retail_project.not_null_fct_sales_item_product_sku.c32f68e54e
+[0m02:05:49.940484 [debug] [Thread-1 (]: Began running node test.ga_retail_project.not_null_fct_sales_item_session_date.3690555d50
+[0m02:05:49.941026 [info ] [Thread-1 (]: 10 of 34 START test not_null_fct_sales_item_session_date ....................... [RUN]
+[0m02:05:49.941791 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_fct_sales_item_product_sku.c32f68e54e, now test.ga_retail_project.not_null_fct_sales_item_session_date.3690555d50)
+[0m02:05:49.942140 [debug] [Thread-1 (]: Began compiling node test.ga_retail_project.not_null_fct_sales_item_session_date.3690555d50
+[0m02:05:49.945654 [debug] [Thread-1 (]: Writing injected SQL for node "test.ga_retail_project.not_null_fct_sales_item_session_date.3690555d50"
+[0m02:05:49.946631 [debug] [Thread-1 (]: Began executing node test.ga_retail_project.not_null_fct_sales_item_session_date.3690555d50
+[0m02:05:49.949454 [debug] [Thread-1 (]: Writing runtime sql for node "test.ga_retail_project.not_null_fct_sales_item_session_date.3690555d50"
+[0m02:05:49.950579 [debug] [Thread-1 (]: On test.ga_retail_project.not_null_fct_sales_item_session_date.3690555d50: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_fct_sales_item_session_date.3690555d50"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select session_date
+from e2e-dbt-project.analytics_mart.fct_sales_item
+where session_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:49.951267 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:05:52.250111 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:48e5ad29-fd00-4469-8a68-ced9d9166562&page=queryresults
+[0m02:05:52.258997 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:df3dadfe-cf82-4c01-8406-4cd58f8ae42f&page=queryresults
+[0m02:05:52.940548 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:ab79d7f3-7398-4769-b363-d528005ec3de&page=queryresults
+[0m02:05:53.140923 [info ] [Thread-4 (]: 8 of 34 PASS not_null_fct_sales_item_revenue_local ............................. [[32mPASS[0m in 3.80s]
+[0m02:05:53.144858 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.not_null_fct_sales_item_revenue_local.7b5a88f392
+[0m02:05:53.146212 [debug] [Thread-4 (]: Began running node test.ga_retail_project.not_null_fct_sales_item_transaction_id.984a9f1b98
+[0m02:05:53.147540 [info ] [Thread-4 (]: 11 of 34 START test not_null_fct_sales_item_transaction_id ..................... [RUN]
+[0m02:05:53.149253 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_fct_sales_item_revenue_local.7b5a88f392, now test.ga_retail_project.not_null_fct_sales_item_transaction_id.984a9f1b98)
+[0m02:05:53.150972 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.not_null_fct_sales_item_transaction_id.984a9f1b98
+[0m02:05:53.158922 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.not_null_fct_sales_item_transaction_id.984a9f1b98"
+[0m02:05:53.161253 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.not_null_fct_sales_item_transaction_id.984a9f1b98
+[0m02:05:53.165243 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.not_null_fct_sales_item_transaction_id.984a9f1b98"
+[0m02:05:53.166582 [debug] [Thread-4 (]: On test.ga_retail_project.not_null_fct_sales_item_transaction_id.984a9f1b98: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_fct_sales_item_transaction_id.984a9f1b98"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from e2e-dbt-project.analytics_mart.fct_sales_item
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:53.167377 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:05:53.241423 [info ] [Thread-1 (]: 10 of 34 PASS not_null_fct_sales_item_session_date ............................. [[32mPASS[0m in 3.30s]
+[0m02:05:53.242515 [debug] [Thread-1 (]: Finished running node test.ga_retail_project.not_null_fct_sales_item_session_date.3690555d50
+[0m02:05:53.243026 [debug] [Thread-1 (]: Began running node test.ga_retail_project.not_null_int_sessions_enriched_session_date.b4e3b0c9da
+[0m02:05:53.243618 [info ] [Thread-1 (]: 12 of 34 START test not_null_int_sessions_enriched_session_date ................ [RUN]
+[0m02:05:53.244409 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_fct_sales_item_session_date.3690555d50, now test.ga_retail_project.not_null_int_sessions_enriched_session_date.b4e3b0c9da)
+[0m02:05:53.244874 [debug] [Thread-1 (]: Began compiling node test.ga_retail_project.not_null_int_sessions_enriched_session_date.b4e3b0c9da
+[0m02:05:53.249446 [debug] [Thread-1 (]: Writing injected SQL for node "test.ga_retail_project.not_null_int_sessions_enriched_session_date.b4e3b0c9da"
+[0m02:05:53.251039 [debug] [Thread-1 (]: Began executing node test.ga_retail_project.not_null_int_sessions_enriched_session_date.b4e3b0c9da
+[0m02:05:53.259506 [debug] [Thread-1 (]: Writing runtime sql for node "test.ga_retail_project.not_null_int_sessions_enriched_session_date.b4e3b0c9da"
+[0m02:05:53.261516 [debug] [Thread-1 (]: On test.ga_retail_project.not_null_int_sessions_enriched_session_date.b4e3b0c9da: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_int_sessions_enriched_session_date.b4e3b0c9da"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select session_date
+from e2e-dbt-project.analytics_int.int_sessions_enriched
+where session_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:53.262386 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:05:54.241982 [info ] [Thread-3 (]: 9 of 34 PASS not_null_fct_sales_item_revenue_usd ............................... [[32mPASS[0m in 4.81s]
+[0m02:05:54.242883 [debug] [Thread-3 (]: Finished running node test.ga_retail_project.not_null_fct_sales_item_revenue_usd.3a4855d5fc
+[0m02:05:54.243303 [debug] [Thread-3 (]: Began running node test.ga_retail_project.not_null_int_sessions_enriched_visit_id.120c79bee9
+[0m02:05:54.243876 [info ] [Thread-3 (]: 13 of 34 START test not_null_int_sessions_enriched_visit_id .................... [RUN]
+[0m02:05:54.244675 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_fct_sales_item_revenue_usd.3a4855d5fc, now test.ga_retail_project.not_null_int_sessions_enriched_visit_id.120c79bee9)
+[0m02:05:54.245043 [debug] [Thread-3 (]: Began compiling node test.ga_retail_project.not_null_int_sessions_enriched_visit_id.120c79bee9
+[0m02:05:54.248645 [debug] [Thread-3 (]: Writing injected SQL for node "test.ga_retail_project.not_null_int_sessions_enriched_visit_id.120c79bee9"
+[0m02:05:54.258666 [debug] [Thread-3 (]: Began executing node test.ga_retail_project.not_null_int_sessions_enriched_visit_id.120c79bee9
+[0m02:05:54.264847 [debug] [Thread-3 (]: Writing runtime sql for node "test.ga_retail_project.not_null_int_sessions_enriched_visit_id.120c79bee9"
+[0m02:05:54.267309 [debug] [Thread-3 (]: On test.ga_retail_project.not_null_int_sessions_enriched_visit_id.120c79bee9: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_int_sessions_enriched_visit_id.120c79bee9"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select visit_id
+from e2e-dbt-project.analytics_int.int_sessions_enriched
+where visit_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:54.268140 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:05:55.580425 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:babbd3e8-9a3e-49d0-ba13-65d128a98e0f&page=queryresults
+[0m02:05:55.902905 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:ecbb2d07-d610-49b4-be54-6367f8a9083e&page=queryresults
+[0m02:05:56.464154 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:699790a2-8fda-4823-a369-f0d2bfb50f75&page=queryresults
+[0m02:05:56.814418 [info ] [Thread-4 (]: 11 of 34 PASS not_null_fct_sales_item_transaction_id ........................... [[32mPASS[0m in 3.67s]
+[0m02:05:56.815505 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.not_null_fct_sales_item_transaction_id.984a9f1b98
+[0m02:05:56.815996 [debug] [Thread-4 (]: Began running node test.ga_retail_project.not_null_int_sessions_enriched_visitor_id.3673967a52
+[0m02:05:56.816565 [info ] [Thread-4 (]: 14 of 34 START test not_null_int_sessions_enriched_visitor_id .................. [RUN]
+[0m02:05:56.817343 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_fct_sales_item_transaction_id.984a9f1b98, now test.ga_retail_project.not_null_int_sessions_enriched_visitor_id.3673967a52)
+[0m02:05:56.817892 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.not_null_int_sessions_enriched_visitor_id.3673967a52
+[0m02:05:56.824787 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.not_null_int_sessions_enriched_visitor_id.3673967a52"
+[0m02:05:56.826734 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.not_null_int_sessions_enriched_visitor_id.3673967a52
+[0m02:05:56.831703 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.not_null_int_sessions_enriched_visitor_id.3673967a52"
+[0m02:05:56.833297 [debug] [Thread-4 (]: On test.ga_retail_project.not_null_int_sessions_enriched_visitor_id.3673967a52: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_int_sessions_enriched_visitor_id.3673967a52"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select visitor_id
+from e2e-dbt-project.analytics_int.int_sessions_enriched
+where visitor_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:56.834067 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:05:58.893787 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:1b6c5390-8165-47d7-92df-c973b5d5a15e&page=queryresults
+[0m02:05:59.149271 [info ] [Thread-2 (]: 2 of 34 PASS dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date  [[32mPASS[0m in 16.91s]
+[0m02:05:59.151301 [debug] [Thread-2 (]: Finished running node test.ga_retail_project.dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date.1a7095a027
+[0m02:05:59.151924 [debug] [Thread-2 (]: Began running node test.ga_retail_project.not_null_product_categories_product_category.bc21a487b0
+[0m02:05:59.152815 [info ] [Thread-2 (]: 15 of 34 START test not_null_product_categories_product_category ............... [RUN]
+[0m02:05:59.154868 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.dbt_utils_unique_combination_of_columns_stg_sessions_visitor_id__visit_id__session_date.1a7095a027, now test.ga_retail_project.not_null_product_categories_product_category.bc21a487b0)
+[0m02:05:59.155534 [debug] [Thread-2 (]: Began compiling node test.ga_retail_project.not_null_product_categories_product_category.bc21a487b0
+[0m02:05:59.161007 [debug] [Thread-2 (]: Writing injected SQL for node "test.ga_retail_project.not_null_product_categories_product_category.bc21a487b0"
+[0m02:05:59.162792 [debug] [Thread-2 (]: Began executing node test.ga_retail_project.not_null_product_categories_product_category.bc21a487b0
+[0m02:05:59.166561 [debug] [Thread-2 (]: Writing runtime sql for node "test.ga_retail_project.not_null_product_categories_product_category.bc21a487b0"
+[0m02:05:59.169427 [debug] [Thread-2 (]: On test.ga_retail_project.not_null_product_categories_product_category.bc21a487b0: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_product_categories_product_category.bc21a487b0"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_category
+from e2e-dbt-project.analytics_stg.product_categories
+where product_category is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:05:59.170205 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:06:01.139761 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:98ceb23f-4095-4ebc-87d6-51521e2c2987&page=queryresults
+[0m02:06:02.084296 [info ] [Thread-2 (]: 15 of 34 PASS not_null_product_categories_product_category ..................... [[32mPASS[0m in 2.93s]
+[0m02:06:02.088656 [debug] [Thread-2 (]: Finished running node test.ga_retail_project.not_null_product_categories_product_category.bc21a487b0
+[0m02:06:02.090474 [debug] [Thread-2 (]: Began running node test.ga_retail_project.not_null_product_categories_product_sku.1546ab5c05
+[0m02:06:02.092495 [info ] [Thread-2 (]: 16 of 34 START test not_null_product_categories_product_sku .................... [RUN]
+[0m02:06:02.094723 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_product_categories_product_category.bc21a487b0, now test.ga_retail_project.not_null_product_categories_product_sku.1546ab5c05)
+[0m02:06:02.096345 [debug] [Thread-2 (]: Began compiling node test.ga_retail_project.not_null_product_categories_product_sku.1546ab5c05
+[0m02:06:02.105486 [debug] [Thread-2 (]: Writing injected SQL for node "test.ga_retail_project.not_null_product_categories_product_sku.1546ab5c05"
+[0m02:06:02.108272 [debug] [Thread-2 (]: Began executing node test.ga_retail_project.not_null_product_categories_product_sku.1546ab5c05
+[0m02:06:02.114748 [debug] [Thread-2 (]: Writing runtime sql for node "test.ga_retail_project.not_null_product_categories_product_sku.1546ab5c05"
+[0m02:06:02.117332 [debug] [Thread-2 (]: On test.ga_retail_project.not_null_product_categories_product_sku.1546ab5c05: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_product_categories_product_sku.1546ab5c05"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_sku
+from e2e-dbt-project.analytics_stg.product_categories
+where product_sku is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:02.118520 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:06:04.091768 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:b3c36f19-0141-4524-96f2-2ff2e65e9bff&page=queryresults
+[0m02:06:04.950083 [info ] [Thread-2 (]: 16 of 34 PASS not_null_product_categories_product_sku .......................... [[32mPASS[0m in 2.86s]
+[0m02:06:04.954951 [debug] [Thread-2 (]: Finished running node test.ga_retail_project.not_null_product_categories_product_sku.1546ab5c05
+[0m02:06:04.958531 [debug] [Thread-2 (]: Began running node test.ga_retail_project.not_null_stg_hits_products_product_sku.e960862d90
+[0m02:06:04.962133 [info ] [Thread-2 (]: 17 of 34 START test not_null_stg_hits_products_product_sku ..................... [RUN]
+[0m02:06:04.965401 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_product_categories_product_sku.1546ab5c05, now test.ga_retail_project.not_null_stg_hits_products_product_sku.e960862d90)
+[0m02:06:04.967339 [debug] [Thread-2 (]: Began compiling node test.ga_retail_project.not_null_stg_hits_products_product_sku.e960862d90
+[0m02:06:04.986197 [debug] [Thread-2 (]: Writing injected SQL for node "test.ga_retail_project.not_null_stg_hits_products_product_sku.e960862d90"
+[0m02:06:04.996606 [debug] [Thread-2 (]: Began executing node test.ga_retail_project.not_null_stg_hits_products_product_sku.e960862d90
+[0m02:06:05.000786 [debug] [Thread-2 (]: Writing runtime sql for node "test.ga_retail_project.not_null_stg_hits_products_product_sku.e960862d90"
+[0m02:06:05.003627 [debug] [Thread-2 (]: On test.ga_retail_project.not_null_stg_hits_products_product_sku.e960862d90: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_stg_hits_products_product_sku.e960862d90"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_sku
+from e2e-dbt-project.analytics_stg.stg_hits_products
+where product_sku is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:05.004317 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:06:06.364277 [info ] [Thread-1 (]: 12 of 34 PASS not_null_int_sessions_enriched_session_date ...................... [[32mPASS[0m in 13.12s]
+[0m02:06:06.365327 [debug] [Thread-1 (]: Finished running node test.ga_retail_project.not_null_int_sessions_enriched_session_date.b4e3b0c9da
+[0m02:06:06.365818 [debug] [Thread-1 (]: Began running node test.ga_retail_project.not_null_stg_sessions_session_date.3ab07e6f1e
+[0m02:06:06.366386 [info ] [Thread-1 (]: 18 of 34 START test not_null_stg_sessions_session_date ......................... [RUN]
+[0m02:06:06.367146 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_int_sessions_enriched_session_date.b4e3b0c9da, now test.ga_retail_project.not_null_stg_sessions_session_date.3ab07e6f1e)
+[0m02:06:06.367664 [debug] [Thread-1 (]: Began compiling node test.ga_retail_project.not_null_stg_sessions_session_date.3ab07e6f1e
+[0m02:06:06.375478 [debug] [Thread-1 (]: Writing injected SQL for node "test.ga_retail_project.not_null_stg_sessions_session_date.3ab07e6f1e"
+[0m02:06:06.378418 [debug] [Thread-1 (]: Began executing node test.ga_retail_project.not_null_stg_sessions_session_date.3ab07e6f1e
+[0m02:06:06.385198 [debug] [Thread-1 (]: Writing runtime sql for node "test.ga_retail_project.not_null_stg_sessions_session_date.3ab07e6f1e"
+[0m02:06:06.387222 [debug] [Thread-1 (]: On test.ga_retail_project.not_null_stg_sessions_session_date.3ab07e6f1e: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_stg_sessions_session_date.3ab07e6f1e"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select session_date
+from e2e-dbt-project.analytics_stg.stg_sessions
+where session_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:06.388257 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:06:06.971818 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:bad350ce-d159-46b0-9b7c-98d326df6c03&page=queryresults
+[0m02:06:07.317640 [info ] [Thread-3 (]: 13 of 34 PASS not_null_int_sessions_enriched_visit_id .......................... [[32mPASS[0m in 13.07s]
+[0m02:06:07.318910 [debug] [Thread-3 (]: Finished running node test.ga_retail_project.not_null_int_sessions_enriched_visit_id.120c79bee9
+[0m02:06:07.319378 [debug] [Thread-3 (]: Began running node test.ga_retail_project.not_null_stg_sessions_visit_id.d583281667
+[0m02:06:07.319906 [info ] [Thread-3 (]: 19 of 34 START test not_null_stg_sessions_visit_id ............................. [RUN]
+[0m02:06:07.320738 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_int_sessions_enriched_visit_id.120c79bee9, now test.ga_retail_project.not_null_stg_sessions_visit_id.d583281667)
+[0m02:06:07.321582 [debug] [Thread-3 (]: Began compiling node test.ga_retail_project.not_null_stg_sessions_visit_id.d583281667
+[0m02:06:07.330465 [debug] [Thread-3 (]: Writing injected SQL for node "test.ga_retail_project.not_null_stg_sessions_visit_id.d583281667"
+[0m02:06:07.332226 [debug] [Thread-3 (]: Began executing node test.ga_retail_project.not_null_stg_sessions_visit_id.d583281667
+[0m02:06:07.335497 [debug] [Thread-3 (]: Writing runtime sql for node "test.ga_retail_project.not_null_stg_sessions_visit_id.d583281667"
+[0m02:06:07.336849 [debug] [Thread-3 (]: On test.ga_retail_project.not_null_stg_sessions_visit_id.d583281667: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_stg_sessions_visit_id.d583281667"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select visit_id
+from e2e-dbt-project.analytics_stg.stg_sessions
+where visit_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:07.337575 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:06:08.363185 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:dcf0f8ad-1c11-4f86-9bc3-a29a3728026b&page=queryresults
+[0m02:06:09.296380 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:1e399308-69bd-41ab-a384-4e22b9b2c1ef&page=queryresults
+[0m02:06:09.775541 [info ] [Thread-1 (]: 18 of 34 PASS not_null_stg_sessions_session_date ............................... [[32mPASS[0m in 3.41s]
+[0m02:06:09.779332 [debug] [Thread-1 (]: Finished running node test.ga_retail_project.not_null_stg_sessions_session_date.3ab07e6f1e
+[0m02:06:09.781115 [debug] [Thread-1 (]: Began running node test.ga_retail_project.not_null_stg_sessions_visitor_id.1fa5d38e94
+[0m02:06:09.783989 [info ] [Thread-1 (]: 20 of 34 START test not_null_stg_sessions_visitor_id ........................... [RUN]
+[0m02:06:09.787239 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_stg_sessions_session_date.3ab07e6f1e, now test.ga_retail_project.not_null_stg_sessions_visitor_id.1fa5d38e94)
+[0m02:06:09.789683 [debug] [Thread-1 (]: Began compiling node test.ga_retail_project.not_null_stg_sessions_visitor_id.1fa5d38e94
+[0m02:06:09.807122 [debug] [Thread-1 (]: Writing injected SQL for node "test.ga_retail_project.not_null_stg_sessions_visitor_id.1fa5d38e94"
+[0m02:06:09.810221 [debug] [Thread-1 (]: Began executing node test.ga_retail_project.not_null_stg_sessions_visitor_id.1fa5d38e94
+[0m02:06:09.816734 [debug] [Thread-1 (]: Writing runtime sql for node "test.ga_retail_project.not_null_stg_sessions_visitor_id.1fa5d38e94"
+[0m02:06:09.819497 [debug] [Thread-1 (]: On test.ga_retail_project.not_null_stg_sessions_visitor_id.1fa5d38e94: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.not_null_stg_sessions_visitor_id.1fa5d38e94"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select visitor_id
+from e2e-dbt-project.analytics_stg.stg_sessions
+where visitor_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:09.821011 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:06:11.839455 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:eeca1e5d-b82d-407f-87e8-7e25d6ae7947&page=queryresults
+[0m02:06:15.486473 [info ] [Thread-4 (]: 14 of 34 PASS not_null_int_sessions_enriched_visitor_id ........................ [[32mPASS[0m in 18.67s]
+[0m02:06:15.490207 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.not_null_int_sessions_enriched_visitor_id.3673967a52
+[0m02:06:15.492023 [debug] [Thread-4 (]: Began running node test.ga_retail_project.source_not_null_ext_country_currency_country.c3d542dd4f
+[0m02:06:15.494022 [info ] [Thread-4 (]: 21 of 34 START test source_not_null_ext_country_currency_country ............... [RUN]
+[0m02:06:15.497068 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_int_sessions_enriched_visitor_id.3673967a52, now test.ga_retail_project.source_not_null_ext_country_currency_country.c3d542dd4f)
+[0m02:06:15.499896 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.source_not_null_ext_country_currency_country.c3d542dd4f
+[0m02:06:15.513536 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.source_not_null_ext_country_currency_country.c3d542dd4f"
+[0m02:06:15.516979 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.source_not_null_ext_country_currency_country.c3d542dd4f
+[0m02:06:15.525351 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.source_not_null_ext_country_currency_country.c3d542dd4f"
+[0m02:06:15.527674 [debug] [Thread-4 (]: On test.ga_retail_project.source_not_null_ext_country_currency_country.c3d542dd4f: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.source_not_null_ext_country_currency_country.c3d542dd4f"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select country
+from `e2e-dbt-project`.`ext`.`country_currency`
+where country is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:15.529047 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:06:17.512295 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:adea277a-1f18-4ba1-876c-95890c168edf&page=queryresults
+[0m02:06:17.773277 [info ] [Thread-2 (]: 17 of 34 PASS not_null_stg_hits_products_product_sku ........................... [[32mPASS[0m in 12.81s]
+[0m02:06:17.776027 [debug] [Thread-2 (]: Finished running node test.ga_retail_project.not_null_stg_hits_products_product_sku.e960862d90
+[0m02:06:17.777389 [debug] [Thread-2 (]: Began running node test.ga_retail_project.source_not_null_ext_country_currency_currency.711d368f5c
+[0m02:06:17.779139 [info ] [Thread-2 (]: 22 of 34 START test source_not_null_ext_country_currency_currency .............. [RUN]
+[0m02:06:17.781194 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_stg_hits_products_product_sku.e960862d90, now test.ga_retail_project.source_not_null_ext_country_currency_currency.711d368f5c)
+[0m02:06:17.784807 [debug] [Thread-2 (]: Began compiling node test.ga_retail_project.source_not_null_ext_country_currency_currency.711d368f5c
+[0m02:06:17.799212 [debug] [Thread-2 (]: Writing injected SQL for node "test.ga_retail_project.source_not_null_ext_country_currency_currency.711d368f5c"
+[0m02:06:17.805010 [debug] [Thread-2 (]: Began executing node test.ga_retail_project.source_not_null_ext_country_currency_currency.711d368f5c
+[0m02:06:17.811743 [debug] [Thread-2 (]: Writing runtime sql for node "test.ga_retail_project.source_not_null_ext_country_currency_currency.711d368f5c"
+[0m02:06:17.814306 [debug] [Thread-2 (]: On test.ga_retail_project.source_not_null_ext_country_currency_currency.711d368f5c: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.source_not_null_ext_country_currency_currency.711d368f5c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select currency
+from `e2e-dbt-project`.`ext`.`country_currency`
+where currency is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:17.815482 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:06:18.348460 [info ] [Thread-4 (]: 21 of 34 PASS source_not_null_ext_country_currency_country ..................... [[32mPASS[0m in 2.85s]
+[0m02:06:18.349642 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.source_not_null_ext_country_currency_country.c3d542dd4f
+[0m02:06:18.350063 [debug] [Thread-4 (]: Began running node test.ga_retail_project.source_not_null_ext_fx_rates_currency.7653c6bd6c
+[0m02:06:18.350574 [info ] [Thread-4 (]: 23 of 34 START test source_not_null_ext_fx_rates_currency ...................... [RUN]
+[0m02:06:18.351408 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.source_not_null_ext_country_currency_country.c3d542dd4f, now test.ga_retail_project.source_not_null_ext_fx_rates_currency.7653c6bd6c)
+[0m02:06:18.352339 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.source_not_null_ext_fx_rates_currency.7653c6bd6c
+[0m02:06:18.361466 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.source_not_null_ext_fx_rates_currency.7653c6bd6c"
+[0m02:06:18.363202 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.source_not_null_ext_fx_rates_currency.7653c6bd6c
+[0m02:06:18.369708 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.source_not_null_ext_fx_rates_currency.7653c6bd6c"
+[0m02:06:18.371548 [debug] [Thread-4 (]: On test.ga_retail_project.source_not_null_ext_fx_rates_currency.7653c6bd6c: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.source_not_null_ext_fx_rates_currency.7653c6bd6c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select currency
+from `e2e-dbt-project`.`ext`.`fx_rates`
+where currency is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:18.372264 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:06:19.843333 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:a89082c7-8273-461d-83e8-1560cd9807b5&page=queryresults
+[0m02:06:20.485441 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:1eca3a48-6978-4ded-be32-c04f1c22699c&page=queryresults
+[0m02:06:20.718788 [info ] [Thread-2 (]: 22 of 34 PASS source_not_null_ext_country_currency_currency .................... [[32mPASS[0m in 2.94s]
+[0m02:06:20.720293 [debug] [Thread-2 (]: Finished running node test.ga_retail_project.source_not_null_ext_country_currency_currency.711d368f5c
+[0m02:06:20.721018 [debug] [Thread-2 (]: Began running node test.ga_retail_project.source_not_null_ext_fx_rates_rate_date.404919c354
+[0m02:06:20.721988 [info ] [Thread-2 (]: 24 of 34 START test source_not_null_ext_fx_rates_rate_date ..................... [RUN]
+[0m02:06:20.723237 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.source_not_null_ext_country_currency_currency.711d368f5c, now test.ga_retail_project.source_not_null_ext_fx_rates_rate_date.404919c354)
+[0m02:06:20.724085 [debug] [Thread-2 (]: Began compiling node test.ga_retail_project.source_not_null_ext_fx_rates_rate_date.404919c354
+[0m02:06:20.731048 [debug] [Thread-2 (]: Writing injected SQL for node "test.ga_retail_project.source_not_null_ext_fx_rates_rate_date.404919c354"
+[0m02:06:20.733528 [debug] [Thread-2 (]: Began executing node test.ga_retail_project.source_not_null_ext_fx_rates_rate_date.404919c354
+[0m02:06:20.744899 [debug] [Thread-2 (]: Writing runtime sql for node "test.ga_retail_project.source_not_null_ext_fx_rates_rate_date.404919c354"
+[0m02:06:20.746518 [debug] [Thread-2 (]: On test.ga_retail_project.source_not_null_ext_fx_rates_rate_date.404919c354: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.source_not_null_ext_fx_rates_rate_date.404919c354"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select rate_date
+from `e2e-dbt-project`.`ext`.`fx_rates`
+where rate_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:20.747350 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:06:21.371257 [info ] [Thread-4 (]: 23 of 34 PASS source_not_null_ext_fx_rates_currency ............................ [[32mPASS[0m in 3.02s]
+[0m02:06:21.372459 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.source_not_null_ext_fx_rates_currency.7653c6bd6c
+[0m02:06:21.372925 [debug] [Thread-4 (]: Began running node test.ga_retail_project.source_not_null_ext_fx_rates_rate_to_usd.2d8f230a01
+[0m02:06:21.373584 [info ] [Thread-4 (]: 25 of 34 START test source_not_null_ext_fx_rates_rate_to_usd ................... [RUN]
+[0m02:06:21.374504 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.source_not_null_ext_fx_rates_currency.7653c6bd6c, now test.ga_retail_project.source_not_null_ext_fx_rates_rate_to_usd.2d8f230a01)
+[0m02:06:21.374926 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.source_not_null_ext_fx_rates_rate_to_usd.2d8f230a01
+[0m02:06:21.379246 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.source_not_null_ext_fx_rates_rate_to_usd.2d8f230a01"
+[0m02:06:21.380475 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.source_not_null_ext_fx_rates_rate_to_usd.2d8f230a01
+[0m02:06:21.545162 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.source_not_null_ext_fx_rates_rate_to_usd.2d8f230a01"
+[0m02:06:21.547225 [debug] [Thread-4 (]: On test.ga_retail_project.source_not_null_ext_fx_rates_rate_to_usd.2d8f230a01: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.source_not_null_ext_fx_rates_rate_to_usd.2d8f230a01"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select rate_to_usd
+from `e2e-dbt-project`.`ext`.`fx_rates`
+where rate_to_usd is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:21.547901 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:06:23.047864 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:4a6b3aa8-924f-4699-92a6-86391f137492&page=queryresults
+[0m02:06:23.517226 [info ] [Thread-3 (]: 19 of 34 PASS not_null_stg_sessions_visit_id ................................... [[32mPASS[0m in 16.20s]
+[0m02:06:23.519412 [debug] [Thread-3 (]: Finished running node test.ga_retail_project.not_null_stg_sessions_visit_id.d583281667
+[0m02:06:23.520496 [debug] [Thread-3 (]: Began running node test.ga_retail_project.stg_hits_products_quality
+[0m02:06:23.521488 [info ] [Thread-3 (]: 26 of 34 START test stg_hits_products_quality .................................. [RUN]
+[0m02:06:23.522760 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_stg_sessions_visit_id.d583281667, now test.ga_retail_project.stg_hits_products_quality)
+[0m02:06:23.523587 [debug] [Thread-3 (]: Began compiling node test.ga_retail_project.stg_hits_products_quality
+[0m02:06:23.529160 [debug] [Thread-3 (]: Writing injected SQL for node "test.ga_retail_project.stg_hits_products_quality"
+[0m02:06:23.532327 [debug] [Thread-3 (]: Began executing node test.ga_retail_project.stg_hits_products_quality
+[0m02:06:23.538315 [debug] [Thread-3 (]: Writing runtime sql for node "test.ga_retail_project.stg_hits_products_quality"
+[0m02:06:23.541771 [debug] [Thread-3 (]: On test.ga_retail_project.stg_hits_products_quality: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.stg_hits_products_quality"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Ensure product price is present & non-negative for rows that should have a price
+with t as (
+  select *
+  from e2e-dbt-project.analytics_stg.stg_hits_products
+)
+select *
+from t
+where product_price_local is null
+   or product_price_local < 0
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:23.543293 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:06:23.798550 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:98683a67-a00d-44a6-9c0d-7a9049d5455d&page=queryresults
+[0m02:06:23.894175 [info ] [Thread-2 (]: 24 of 34 PASS source_not_null_ext_fx_rates_rate_date ........................... [[32mPASS[0m in 3.17s]
+[0m02:06:23.895355 [debug] [Thread-2 (]: Finished running node test.ga_retail_project.source_not_null_ext_fx_rates_rate_date.404919c354
+[0m02:06:23.895787 [debug] [Thread-2 (]: Began running node test.ga_retail_project.stg_sessions_revenue_nonnegative
+[0m02:06:23.896293 [info ] [Thread-2 (]: 27 of 34 START test stg_sessions_revenue_nonnegative ........................... [RUN]
+[0m02:06:23.897006 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.source_not_null_ext_fx_rates_rate_date.404919c354, now test.ga_retail_project.stg_sessions_revenue_nonnegative)
+[0m02:06:23.897411 [debug] [Thread-2 (]: Began compiling node test.ga_retail_project.stg_sessions_revenue_nonnegative
+[0m02:06:23.899914 [debug] [Thread-2 (]: Writing injected SQL for node "test.ga_retail_project.stg_sessions_revenue_nonnegative"
+[0m02:06:23.900950 [debug] [Thread-2 (]: Began executing node test.ga_retail_project.stg_sessions_revenue_nonnegative
+[0m02:06:23.904065 [debug] [Thread-2 (]: Writing runtime sql for node "test.ga_retail_project.stg_sessions_revenue_nonnegative"
+[0m02:06:23.905334 [debug] [Thread-2 (]: On test.ga_retail_project.stg_sessions_revenue_nonnegative: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.stg_sessions_revenue_nonnegative"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Fail if any session has a negative revenue (NULLs are allowed)
+select *
+from e2e-dbt-project.analytics_stg.stg_sessions
+where revenue_usd is not null
+  and revenue_usd < 0
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:23.906065 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:06:24.033853 [info ] [Thread-1 (]: 20 of 34 PASS not_null_stg_sessions_visitor_id ................................. [[32mPASS[0m in 14.25s]
+[0m02:06:24.035393 [debug] [Thread-1 (]: Finished running node test.ga_retail_project.not_null_stg_sessions_visitor_id.1fa5d38e94
+[0m02:06:24.036413 [debug] [Thread-1 (]: Began running node test.ga_retail_project.stg_sessions_with_fx_local_nonnegative
+[0m02:06:24.037549 [info ] [Thread-1 (]: 28 of 34 START test stg_sessions_with_fx_local_nonnegative ..................... [RUN]
+[0m02:06:24.038862 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.not_null_stg_sessions_visitor_id.1fa5d38e94, now test.ga_retail_project.stg_sessions_with_fx_local_nonnegative)
+[0m02:06:24.039834 [debug] [Thread-1 (]: Began compiling node test.ga_retail_project.stg_sessions_with_fx_local_nonnegative
+[0m02:06:24.045822 [debug] [Thread-1 (]: Writing injected SQL for node "test.ga_retail_project.stg_sessions_with_fx_local_nonnegative"
+[0m02:06:24.047988 [debug] [Thread-1 (]: Began executing node test.ga_retail_project.stg_sessions_with_fx_local_nonnegative
+[0m02:06:24.052111 [debug] [Thread-1 (]: Writing runtime sql for node "test.ga_retail_project.stg_sessions_with_fx_local_nonnegative"
+[0m02:06:24.054085 [debug] [Thread-1 (]: On test.ga_retail_project.stg_sessions_with_fx_local_nonnegative: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.stg_sessions_with_fx_local_nonnegative"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Check session_revenue_usd_raw is non-negative (when present), and FX is positive
+with t as (
+  select *
+  from e2e-dbt-project.analytics_stg.stg_sessions_with_fx
+)
+select *
+from t
+where (session_revenue_usd_raw is not null and session_revenue_usd_raw < 0)
+   or (rate_to_usd is not null and rate_to_usd <= 0)
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:24.055107 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:06:24.624239 [info ] [Thread-4 (]: 25 of 34 PASS source_not_null_ext_fx_rates_rate_to_usd ......................... [[32mPASS[0m in 3.25s]
+[0m02:06:24.625270 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.source_not_null_ext_fx_rates_rate_to_usd.2d8f230a01
+[0m02:06:24.625717 [debug] [Thread-4 (]: Began running node test.ga_retail_project.test_non_negative_values
+[0m02:06:24.626319 [info ] [Thread-4 (]: 29 of 34 START test test_non_negative_values ................................... [RUN]
+[0m02:06:24.627139 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.source_not_null_ext_fx_rates_rate_to_usd.2d8f230a01, now test.ga_retail_project.test_non_negative_values)
+[0m02:06:24.627533 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.test_non_negative_values
+[0m02:06:24.630013 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.test_non_negative_values"
+[0m02:06:24.631010 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.test_non_negative_values
+[0m02:06:24.633243 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.test_non_negative_values"
+[0m02:06:24.634387 [debug] [Thread-4 (]: On test.ga_retail_project.test_non_negative_values: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.test_non_negative_values"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- tests/test_non_negative_values.sql
+select *
+from e2e-dbt-project.analytics_mart.fct_sales_item
+where product_price_usd < 0
+   or revenue_usd < 0
+   or revenue_local < 0
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:24.635087 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:06:25.732657 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:5947bbef-4fe6-46d9-aae1-ec270f01cab6&page=queryresults
+[0m02:06:26.244481 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:53c63858-bcf6-4d59-b009-7906840ba9a2&page=queryresults
+[0m02:06:26.618622 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:ac86cf70-131f-47c4-99a7-7621230e2c4a&page=queryresults
+[0m02:06:27.204866 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:753e60b7-f476-41ab-a422-8d9cc61844d0&page=queryresults
+[0m02:06:28.133794 [info ] [Thread-4 (]: 29 of 34 PASS test_non_negative_values ......................................... [[32mPASS[0m in 3.51s]
+[0m02:06:28.137210 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.test_non_negative_values
+[0m02:06:28.138970 [debug] [Thread-4 (]: Began running node test.ga_retail_project.unique_dim_country_country.11db8eecec
+[0m02:06:28.140872 [info ] [Thread-4 (]: 30 of 34 START test unique_dim_country_country ................................. [RUN]
+[0m02:06:28.143728 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.test_non_negative_values, now test.ga_retail_project.unique_dim_country_country.11db8eecec)
+[0m02:06:28.145871 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.unique_dim_country_country.11db8eecec
+[0m02:06:28.181215 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.unique_dim_country_country.11db8eecec"
+[0m02:06:28.183938 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.unique_dim_country_country.11db8eecec
+[0m02:06:28.191364 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.unique_dim_country_country.11db8eecec"
+[0m02:06:28.193701 [debug] [Thread-4 (]: On test.ga_retail_project.unique_dim_country_country.11db8eecec: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.unique_dim_country_country.11db8eecec"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select country as unique_field
+  from e2e-dbt-project.analytics_mart.dim_country
+  where country is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:28.195007 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:06:30.246402 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:56b4d27f-27fd-4052-a877-c49ea56e063c&page=queryresults
+[0m02:06:31.151226 [info ] [Thread-4 (]: 30 of 34 PASS unique_dim_country_country ....................................... [[32mPASS[0m in 3.01s]
+[0m02:06:31.152429 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.unique_dim_country_country.11db8eecec
+[0m02:06:31.152863 [debug] [Thread-4 (]: Began running node test.ga_retail_project.unique_dim_date_dt.bbad368071
+[0m02:06:31.153389 [info ] [Thread-4 (]: 31 of 34 START test unique_dim_date_dt ......................................... [RUN]
+[0m02:06:31.154082 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.unique_dim_country_country.11db8eecec, now test.ga_retail_project.unique_dim_date_dt.bbad368071)
+[0m02:06:31.154627 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.unique_dim_date_dt.bbad368071
+[0m02:06:31.158394 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.unique_dim_date_dt.bbad368071"
+[0m02:06:31.159435 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.unique_dim_date_dt.bbad368071
+[0m02:06:31.161722 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.unique_dim_date_dt.bbad368071"
+[0m02:06:31.162718 [debug] [Thread-4 (]: On test.ga_retail_project.unique_dim_date_dt.bbad368071: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.unique_dim_date_dt.bbad368071"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select dt as unique_field
+  from e2e-dbt-project.analytics_mart.dim_date
+  where dt is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:31.163180 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:06:33.447891 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:ed4a75bf-27c5-4ae1-a30f-90f60f119d2c&page=queryresults
+[0m02:06:34.491299 [info ] [Thread-4 (]: 31 of 34 PASS unique_dim_date_dt ............................................... [[32mPASS[0m in 3.34s]
+[0m02:06:34.494698 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.unique_dim_date_dt.bbad368071
+[0m02:06:34.496623 [debug] [Thread-4 (]: Began running node test.ga_retail_project.unique_dim_products_product_sku.ab7f821296
+[0m02:06:34.498648 [info ] [Thread-4 (]: 32 of 34 START test unique_dim_products_product_sku ............................ [RUN]
+[0m02:06:34.501539 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.unique_dim_date_dt.bbad368071, now test.ga_retail_project.unique_dim_products_product_sku.ab7f821296)
+[0m02:06:34.504754 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.unique_dim_products_product_sku.ab7f821296
+[0m02:06:34.525462 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.unique_dim_products_product_sku.ab7f821296"
+[0m02:06:34.530654 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.unique_dim_products_product_sku.ab7f821296
+[0m02:06:34.541480 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.unique_dim_products_product_sku.ab7f821296"
+[0m02:06:34.545196 [debug] [Thread-4 (]: On test.ga_retail_project.unique_dim_products_product_sku.ab7f821296: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.unique_dim_products_product_sku.ab7f821296"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select product_sku as unique_field
+  from e2e-dbt-project.analytics_mart.dim_products
+  where product_sku is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:34.547291 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:06:36.725723 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:08259862-f46e-48e9-b154-95f437bfd2ac&page=queryresults
+[0m02:06:37.558696 [info ] [Thread-4 (]: 32 of 34 PASS unique_dim_products_product_sku .................................. [[32mPASS[0m in 3.06s]
+[0m02:06:37.561565 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.unique_dim_products_product_sku.ab7f821296
+[0m02:06:37.562853 [debug] [Thread-4 (]: Began running node test.ga_retail_project.unique_dim_visitors_visitor_id.2a2aabfa1c
+[0m02:06:37.563925 [info ] [Thread-4 (]: 33 of 34 START test unique_dim_visitors_visitor_id ............................. [RUN]
+[0m02:06:37.565376 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.unique_dim_products_product_sku.ab7f821296, now test.ga_retail_project.unique_dim_visitors_visitor_id.2a2aabfa1c)
+[0m02:06:37.567025 [debug] [Thread-4 (]: Began compiling node test.ga_retail_project.unique_dim_visitors_visitor_id.2a2aabfa1c
+[0m02:06:37.583515 [debug] [Thread-4 (]: Writing injected SQL for node "test.ga_retail_project.unique_dim_visitors_visitor_id.2a2aabfa1c"
+[0m02:06:37.586945 [debug] [Thread-4 (]: Began executing node test.ga_retail_project.unique_dim_visitors_visitor_id.2a2aabfa1c
+[0m02:06:37.593648 [debug] [Thread-4 (]: Writing runtime sql for node "test.ga_retail_project.unique_dim_visitors_visitor_id.2a2aabfa1c"
+[0m02:06:37.597293 [debug] [Thread-4 (]: On test.ga_retail_project.unique_dim_visitors_visitor_id.2a2aabfa1c: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.unique_dim_visitors_visitor_id.2a2aabfa1c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select visitor_id as unique_field
+  from e2e-dbt-project.analytics_mart.dim_visitors
+  where visitor_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:37.598274 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:06:40.436214 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:82392da5-baa4-49bb-aaf9-61fe4a12af6f&page=queryresults
+[0m02:06:40.883527 [info ] [Thread-3 (]: 26 of 34 PASS stg_hits_products_quality ........................................ [[32mPASS[0m in 17.36s]
+[0m02:06:40.887064 [debug] [Thread-3 (]: Finished running node test.ga_retail_project.stg_hits_products_quality
+[0m02:06:40.889813 [debug] [Thread-3 (]: Began running node test.ga_retail_project.unique_product_categories_product_sku.9f67cac6eb
+[0m02:06:40.892463 [info ] [Thread-3 (]: 34 of 34 START test unique_product_categories_product_sku ...................... [RUN]
+[0m02:06:40.894702 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ga_retail_project.stg_hits_products_quality, now test.ga_retail_project.unique_product_categories_product_sku.9f67cac6eb)
+[0m02:06:40.897389 [debug] [Thread-3 (]: Began compiling node test.ga_retail_project.unique_product_categories_product_sku.9f67cac6eb
+[0m02:06:40.908903 [debug] [Thread-3 (]: Writing injected SQL for node "test.ga_retail_project.unique_product_categories_product_sku.9f67cac6eb"
+[0m02:06:40.911734 [debug] [Thread-3 (]: Began executing node test.ga_retail_project.unique_product_categories_product_sku.9f67cac6eb
+[0m02:06:40.916134 [debug] [Thread-3 (]: Writing runtime sql for node "test.ga_retail_project.unique_product_categories_product_sku.9f67cac6eb"
+[0m02:06:40.918158 [debug] [Thread-3 (]: On test.ga_retail_project.unique_product_categories_product_sku.9f67cac6eb: /* {"app": "dbt", "dbt_version": "1.10.9", "profile_name": "ga_retail_project", "target_name": "dev", "node_id": "test.ga_retail_project.unique_product_categories_product_sku.9f67cac6eb"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select product_sku as unique_field
+  from e2e-dbt-project.analytics_stg.product_categories
+  where product_sku is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m02:06:40.919403 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:06:41.390003 [info ] [Thread-4 (]: 33 of 34 PASS unique_dim_visitors_visitor_id ................................... [[32mPASS[0m in 3.82s]
+[0m02:06:41.391059 [debug] [Thread-4 (]: Finished running node test.ga_retail_project.unique_dim_visitors_visitor_id.2a2aabfa1c
+[0m02:06:41.559896 [info ] [Thread-2 (]: 27 of 34 PASS stg_sessions_revenue_nonnegative ................................. [[32mPASS[0m in 17.66s]
+[0m02:06:41.560986 [debug] [Thread-2 (]: Finished running node test.ga_retail_project.stg_sessions_revenue_nonnegative
+[0m02:06:42.838395 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=e2e-dbt-project&j=bq:US:adfbaa10-59c1-455e-a9ef-c3aaffc5e436&page=queryresults
+[0m02:06:43.433608 [info ] [Thread-1 (]: 28 of 34 PASS stg_sessions_with_fx_local_nonnegative ........................... [[32mPASS[0m in 19.39s]
+[0m02:06:43.438841 [debug] [Thread-1 (]: Finished running node test.ga_retail_project.stg_sessions_with_fx_local_nonnegative
+[0m02:06:43.673127 [info ] [Thread-3 (]: 34 of 34 PASS unique_product_categories_product_sku ............................ [[32mPASS[0m in 2.78s]
+[0m02:06:43.674362 [debug] [Thread-3 (]: Finished running node test.ga_retail_project.unique_product_categories_product_sku.9f67cac6eb
+[0m02:06:43.676305 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:06:43.678415 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:06:43.678826 [debug] [MainThread]: Connection 'list_e2e-dbt-project_analytics_mart' was properly closed.
+[0m02:06:43.679223 [debug] [MainThread]: Connection 'list_e2e-dbt-project_analytics_stg' was properly closed.
+[0m02:06:43.679591 [debug] [MainThread]: Connection 'list_e2e-dbt-project_analytics_int' was properly closed.
+[0m02:06:43.679955 [debug] [MainThread]: Connection 'test.ga_retail_project.stg_sessions_with_fx_local_nonnegative' was properly closed.
+[0m02:06:43.680323 [debug] [MainThread]: Connection 'test.ga_retail_project.unique_product_categories_product_sku.9f67cac6eb' was properly closed.
+[0m02:06:43.680686 [debug] [MainThread]: Connection 'test.ga_retail_project.unique_dim_visitors_visitor_id.2a2aabfa1c' was properly closed.
+[0m02:06:43.681049 [debug] [MainThread]: Connection 'test.ga_retail_project.stg_sessions_revenue_nonnegative' was properly closed.
+[0m02:06:43.681488 [info ] [MainThread]: 
+[0m02:06:43.682122 [info ] [MainThread]: Finished running 34 data tests in 0 hours 1 minutes and 3.54 seconds (63.54s).
+[0m02:06:43.691953 [debug] [MainThread]: Command end result
+[0m02:06:43.742161 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Projects\ga_retail_project\target\manifest.json
+[0m02:06:43.745686 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Projects\ga_retail_project\target\semantic_manifest.json
+[0m02:06:43.756964 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Projects\ga_retail_project\target\run_results.json
+[0m02:06:43.757423 [info ] [MainThread]: 
+[0m02:06:43.758126 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:06:43.758748 [info ] [MainThread]: 
+[0m02:06:43.759354 [info ] [MainThread]: Done. PASS=34 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=34
+[0m02:06:43.760673 [debug] [MainThread]: Command `dbt test` succeeded at 02:06:43.760541 after 68.60 seconds
+[0m02:06:43.761097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A77B8AC710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A720B65390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A720BE6BA0>]}
+[0m02:06:43.761524 [debug] [MainThread]: Flushing usage events
+[0m02:06:45.071947 [debug] [MainThread]: An error was encountered while trying to flush usage events

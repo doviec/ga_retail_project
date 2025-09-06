@@ -22,8 +22,8 @@ with src as (
     totals.transactions                                as transactions,
     safe_divide(totals.transactionRevenue, 1e6)        as revenue_usd   -- may be null
   from `bigquery-public-data.google_analytics_sample.ga_sessions_*`
-where _TABLE_SUFFIX between '20170101'
-                        and '20171231'
+where _TABLE_SUFFIX between '20160801'
+                        and '20170801'
 )
 
 select *

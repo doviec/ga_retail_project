@@ -25,8 +25,8 @@ with base as (
   from `bigquery-public-data.google_analytics_sample.ga_sessions_*`,
        unnest(hits) as h,
        unnest(h.product) as p
-  where _TABLE_SUFFIX between '20170101'
-                        and '20171231'
+  where _TABLE_SUFFIX between '20160801'
+                        and '20170801'
     and p.productSKU is not null
 )
 select * from base;
